@@ -1,0 +1,68 @@
+"year","fips","pop2020","pop2025","state","stateCode","growthSince2020","name","county","slug","areaMi","densityMi","rank"
+2025,12086,2695685,2714489,"Florida","FL",0.006975592474639969,"Miami-Dade County","Miami-Dade County","florida/miami-dade-county",1900,1428.6784210526316,1
+2025,12011,1943398,1993815,"Florida","FL",0.025942704479473555,"Broward County","Broward County","florida/broward-county",1203,1657.369077306733,2
+2025,12057,1466255,1579746,"Florida","FL",0.07740195259351212,"Hillsborough County","Hillsborough County","florida/hillsborough-county",1023,1544.2287390029326,3
+2025,12099,1494282,1561669,"Florida","FL",0.04509657480984175,"Palm Beach County","Palm Beach County","florida/palm-beach-county",1964,795.1471486761711,4
+2025,12095,1431679,1510726,"Florida","FL",0.0552127956057189,"Orange County","Orange County","florida/orange-county",903,1673.0077519379845,5
+2025,12031,997784,1058444,"Florida","FL",0.060794721101961935,"Duval County","Duval County","florida/duval-county",763,1387.213630406291,6
+2025,12103,959793,961204,"Florida","FL",0.0014701086588462253,"Pinellas County","Pinellas County","florida/pinellas-county",274,3508.043795620438,7
+2025,12105,730158,878226,"Florida","FL",0.20278898539768098,"Polk County","Polk County","florida/polk-county",1798,488.4460511679644,8
+2025,12071,765547,858937,"Florida","FL",0.1219912036752806,"Lee County","Lee County","florida/lee-county",781,1099.7912932138283,9
+2025,12101,566156,680706,"Florida","FL",0.20232939331209066,"Pasco County","Pasco County","florida/pasco-county",747,911.2530120481928,10
+2025,12009,608775,670523,"Florida","FL",0.1014299207424747,"Brevard County","Brevard County","florida/brevard-county",1015,660.6137931034483,11
+2025,12127,555776,611741,"Florida","FL",0.10069704341317376,"Volusia County","Volusia County","florida/volusia-county",1101,555.6230699364214,12
+2025,12117,471455,495567,"Florida","FL",0.05114379951426962,"Seminole County","Seminole County","florida/seminole-county",309,1603.7766990291261,13
+2025,12115,436237,481935,"Florida","FL",0.10475498410267803,"Sarasota County","Sarasota County","florida/sarasota-county",556,866.7895683453237,14
+2025,12097,391141,468266,"Florida","FL",0.19717953372313302,"Osceola County","Osceola County","florida/osceola-county",1328,352.60993975903614,15
+2025,12081,401619,464947,"Florida","FL",0.15768178298337476,"Manatee County","Manatee County","florida/manatee-county",743,625.7698519515478,16
+2025,12069,386216,453206,"Florida","FL",0.17345216148476506,"Lake County","Lake County","florida/lake-county",952,476.0567226890756,17
+2025,12083,377472,437003,"Florida","FL",0.15770971091895558,"Marion County","Marion County","florida/marion-county",1588,275.19080604534,18
+2025,12021,377310,417898,"Florida","FL",0.10757202300495616,"Collier County","Collier County","florida/collier-county",1997,209.26289434151226,19
+2025,12111,331441,402986,"Florida","FL",0.21586043971626934,"St. Lucie County","St. Lucie County","florida/st-lucie-county",572,704.520979020979,20
+2025,12109,277099,346186,"Florida","FL",0.24932244432495243,"St. Johns County","St. Johns County","florida/st-johns-county",601,576.0166389351082,21
+2025,12033,322568,333064,"Florida","FL",0.03253887552392043,"Escambia County","Escambia County","florida/escambia-county",657,506.94672754946725,22
+2025,12073,293955,296175,"Florida","FL",0.007552176353523565,"Leon County","Leon County","florida/leon-county",668,443.375748502994,23
+2025,12001,279737,289900,"Florida","FL",0.036330553341173966,"Alachua County","Alachua County","florida/alachua-county",876,330.93607305936075,24
+2025,12019,218951,244049,"Florida","FL",0.11462838717338575,"Clay County","Clay County","florida/clay-county",605,403.38677685950415,25
+2025,12053,195624,224551,"Florida","FL",0.14787040444935173,"Hernando County","Hernando County","florida/hernando-county",473,474.737843551797,26
+2025,12091,212085,222464,"Florida","FL",0.04893792583162404,"Okaloosa County","Okaloosa County","florida/okaloosa-county",930,239.20860215053764,27
+2025,12015,187995,213238,"Florida","FL",0.13427484773531217,"Charlotte County","Charlotte County","florida/charlotte-county",681,313.12481644640235,28
+2025,12113,189011,213088,"Florida","FL",0.12738412050092318,"Santa Rosa County","Santa Rosa County","florida/santa-rosa-county",1012,210.56126482213438,29
+2025,12005,174525,201887,"Florida","FL",0.1567798309697752,"Bay County","Bay County","florida/bay-county",759,265.99077733860344,30
+2025,12017,154568,175072,"Florida","FL",0.13265358935872884,"Citrus County","Citrus County","florida/citrus-county",582,300.8109965635739,31
+2025,12061,160446,174851,"Florida","FL",0.08978098550291058,"Indian River County","Indian River County","florida/indian-river-county",503,347.6163021868787,32
+2025,12085,158671,165971,"Florida","FL",0.04600714686363605,"Martin County","Martin County","florida/martin-county",544,305.09375,33
+2025,12119,130290,165161,"Florida","FL",0.2676414153043212,"Sumter County","Sumter County","florida/sumter-county",557,296.5188509874327,34
+2025,12035,116028,140801,"Florida","FL",0.21350880821870577,"Flagler County","Flagler County","florida/flagler-county",486,289.7139917695473,35
+2025,12055,101349,111544,"Florida","FL",0.10059300042427655,"Highlands County","Highlands County","florida/highlands-county",1018,109.57170923379175,36
+2025,12089,91031,108851,"Florida","FL",0.19575748920697356,"Nassau County","Nassau County","florida/nassau-county",649,167.7211093990755,37
+2025,12131,75941,92254,"Florida","FL",0.21481149840007374,"Walton County","Walton County","florida/walton-county",1038,88.8766859344894,38
+2025,12087,82847,78606,"Florida","FL",-0.05119074921240363,"Monroe County","Monroe County","florida/monroe-county",983,79.96541200406918,39
+2025,12107,73372,78393,"Florida","FL",0.06843209943847794,"Putnam County","Putnam County","florida/putnam-county",728,107.6826923076923,40
+2025,12023,69740,75449,"Florida","FL",0.08186119873817033,"Columbia County","Columbia County","florida/columbia-county",797,94.66624843161857,41
+2025,12063,47096,49356,"Florida","FL",0.04798709019874292,"Jackson County","Jackson County","florida/jackson-county",918,53.76470588235294,42
+2025,12075,43059,49129,"Florida","FL",0.14096936761188128,"Levy County","Levy County","florida/levy-county",1118,43.94364937388193,43
+2025,12121,43524,47580,"Florida","FL",0.09318996415770608,"Suwannee County","Suwannee County","florida/suwannee-county",689,69.05660377358491,44
+2025,12051,39723,47217,"Florida","FL",0.18865644588777286,"Hendry County","Hendry County","florida/hendry-county",1156,40.84515570934256,45
+2025,12039,43411,44713,"Florida","FL",0.029992398240077378,"Gadsden County","Gadsden County","florida/gadsden-county",516,86.65310077519379,46
+2025,12093,39652,43535,"Florida","FL",0.09792696459195005,"Okeechobee County","Okeechobee County","florida/okeechobee-county",769,56.612483745123534,47
+2025,12129,33893,39009,"Florida","FL",0.15094562298999792,"Wakulla County","Wakulla County","florida/wakulla-county",606,64.37128712871286,48
+2025,12027,34086,37297,"Florida","FL",0.09420289855072461,"DeSoto County","DeSoto County","florida/desoto-county",637,58.55102040816327,49
+2025,12003,28116,29532,"Florida","FL",0.050362782757148894,"Baker County","Baker County","florida/baker-county",585,50.48205128205128,50
+2025,12007,28222,28982,"Florida","FL",0.026929345900361445,"Bradford County","Bradford County","florida/bradford-county",294,98.578231292517,51
+2025,12133,25320,25996,"Florida","FL",0.026698262243285864,"Washington County","Washington County","florida/washington-county",585,44.437606837606836,52
+2025,12049,25339,25978,"Florida","FL",0.02521804333241251,"Hardee County","Hardee County","florida/hardee-county",638,40.71786833855799,53
+2025,12123,21743,22120,"Florida","FL",0.017338913673366152,"Taylor County","Taylor County","florida/taylor-county",1043,21.20805369127517,54
+2025,12041,17882,20757,"Florida","FL",0.1607761995302539,"Gilchrist County","Gilchrist County","florida/gilchrist-county",350,59.30571428571429,55
+2025,12059,19578,20526,"Florida","FL",0.04842169782408834,"Holmes County","Holmes County","florida/holmes-county",479,42.8517745302714,56
+2025,12079,17869,19097,"Florida","FL",0.0687223683474174,"Madison County","Madison County","florida/madison-county",697,27.398852223816355,57
+2025,12029,16687,18155,"Florida","FL",0.0879726733385271,"Dixie County","Dixie County","florida/dixie-county",705,25.75177304964539,58
+2025,12045,14259,16481,"Florida","FL",0.1558314047268392,"Gulf County","Gulf County","florida/gulf-county",553,29.802893309222423,59
+2025,12065,14399,16212,"Florida","FL",0.12591152163344677,"Jefferson County","Jefferson County","florida/jefferson-county",598,27.110367892976587,60
+2025,12125,15425,15568,"Florida","FL",0.009270664505672599,"Union County","Union County","florida/union-county",244,63.80327868852459,61
+2025,12047,13729,14025,"Florida","FL",0.021560201034307003,"Hamilton County","Hamilton County","florida/hamilton-county",514,27.285992217898833,62
+2025,12013,13707,13480,"Florida","FL",-0.016560881301524777,"Calhoun County","Calhoun County","florida/calhoun-county",567,23.774250440917108,63
+2025,12043,12078,13432,"Florida","FL",0.11210465308825968,"Glades County","Glades County","florida/glades-county",807,16.64436183395291,64
+2025,12037,12468,12798,"Florida","FL",0.026467757459095242,"Franklin County","Franklin County","florida/franklin-county",545,23.48256880733945,65
+2025,12067,8218,8680,"Florida","FL",0.05621805792163537,"Lafayette County","Lafayette County","florida/lafayette-county",543,15.985267034990791,66
+2025,12077,7804,7892,"Florida","FL",0.011276268580215243,"Liberty County","Liberty County","florida/liberty-county",836,9.440191387559809,67

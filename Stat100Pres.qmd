@@ -1,0 +1,271 @@
+---
+title: "Stat-100-Presentation"
+author: "Henry Lampton and Charlie Hanson"
+format: revealjs
+---
+```{r}
+#| include: False
+library(tidyverse)
+library(janitor)
+library(lubridate)
+library(RColorBrewer) 
+```
+```{r}
+library(readxl)
+### Florida ###
+Florida2023 <-
+  read_excel("Florida2023.xlsx")
+
+FloridaPop <- 
+  read.csv("FloridaPop.csv")
+```
+```{r}
+### Clean Florida ###
+FloridaPop <- FloridaPop |>
+  select(county, densityMi, rank) |>
+  mutate(county = sub(" County", "", county, fixed= TRUE))
+
+Florida2023 <- Florida2023 |>
+  mutate(county = `High School Graduation Rate, Percent of Student Cohort Since 9th Grade, 2022-23`) |>
+  mutate( Graduation_Rate = ...2) |>
+  select(county, Graduation_Rate)
+
+Florida2023 <- Florida2023[-(1:2),]
+
+Florida2023 <- left_join(Florida2023, FloridaPop)
+
+Florida2023 <- Florida2023 |>
+  mutate(Graduation_Rate = substr( Graduation_Rate, start = 1, stop = 4)) |>
+  mutate( Graduation_Rate = as.numeric( Graduation_Rate ) )
+  
+```
+
+```{r}
+# include: FALSE
+library(tmap)
+library( sf )
+library( geodata )
+library(tinytable)
+
+us <- gadm( "USA", level = 2, path = getwd() )
+us <- st_as_sf( us )
+
+florida <- us |> filter( NAME_1 == "Florida")
+
+tmap_mode("plot")
+
+florida <- left_join( florida, Florida2023 |> rename( NAME_2 = county ) |> select( -rank ) )
+```
+## Project Explanation
+
+Our project is about the effect of population density in different counties on Highschool graduation rates across several different states. We will create maps of population density and graduation rate by county and compare them across the three states we have chosen, Texas, New York, and Florida. For this presentation we have graphed both Texas and Florida. Our hypothesis remains that lower populations will have a higher graduation rate but Texas has some interesting data that somewhat contradicts that. 
+
+## Florida Graph
+```{r}
+### Florida Graph ###
+Florida2023 |>
+  ggplot(aes(x = densityMi, y = Graduation_Rate)) +
+  geom_point() +
+  labs( x = 'density', y = 'Grad Rate', title = 'Florida Data') + 
+  xlim(0 , 3600) + ylim(65, 100)
+```
+
+## Florida Graduation Rate Map
+
+```{r}
+tm_shape( florida ) + 
+  tm_polygons( id = "NAME_2", fill = "Graduation_Rate", palette = "greens", style= "jenks")
+```
+
+## Florida Population Density Map
+```{r}
+tm_shape( florida ) +
+  tm_polygons( id = "NAME_2", fill = "densityMi", palette = "blues", breaks = c(0, 50, 100, 200, 500, 1000, 1500, 2000, 3500))
+```
+
+
+```{r}
+### Texas ###
+Texas2023 <- 
+  read_excel("Texas2023.xlsx")
+
+Texas_Pop <-
+  read_csv("TexasPop.csv")
+```
+
+```{r}
+### Clean Texas Data ###
+Texas_Pop <- Texas_Pop |>
+  select(county, densityMi, rank) |>
+  mutate(county = sub(" County", "", county, fixed= TRUE)) |>
+  mutate( county = toupper(county)) 
+
+Texas2023 <- Texas2023 |>
+  mutate(county = `County Name`)|>
+  mutate(Graduation_Rate = `Graduation Rate`) |>
+  select(county, Graduation_Rate)
+Texas2023 <- Texas2023 |>
+  mutate(county = sub(" COUNTY", "", county, fixed= TRUE))
+```
+```{r}
+Texas2023 <- left_join(Texas2023, Texas_Pop)
+
+Texas2023 <- Texas2023 |>
+  mutate(Graduation_Rate = substr( Graduation_Rate, start = 1, stop = 4)) |>
+  mutate( Graduation_Rate = as.numeric( Graduation_Rate ) )
+```
+
+```{r}
+### Texas Map Data
+texas <- us |> filter( NAME_1 == "Texas")
+
+tmap_mode("plot")
+
+texas <- texas |>
+  mutate( NAME_2 = toupper(NAME_2))
+texas <- left_join( texas, Texas2023 |> rename( NAME_2 = county ) |> select( -rank ) )
+```
+
+## Texas Graph
+```{r}
+### Texas Graph ###
+Texas2023 |>
+  ggplot(aes(x = densityMi, y = Graduation_Rate)) +
+  geom_point() +
+  labs( x = 'density', y = 'Grad Rate', title = 'Texas Data') + 
+  xlim(0 , 3600) + ylim(65, 100)
+```
+
+## Texas Graduation Rate Map
+```{r}
+tm_shape( texas ) + 
+  tm_polygons( id = "NAME_2", fill = "Graduation_Rate", palette = "greens", style= "jenks")
+```
+
+## Texas Population Density Map
+```{r}
+tm_shape( texas ) +
+  tm_polygons( id = "NAME_2", fill = "densityMi", palette = "blues", breaks = c(0, 5, 10, 25, 50, 200, 500, 1500, 2000, 3500))
+```
+
+
+
+```{r}
+### New York ###
+NewYork2023 <- 
+  read_csv("data-Ct345.csv")
+
+NewYorkPop <-
+  read_csv("NewYorkPop.csv")
+```
+
+```{r}
+NewYorkPop <- NewYorkPop |>
+  select(county, densityMi) |>
+  mutate(county = sub(" County", "", county, fixed= TRUE)) |>
+  mutate( county = toupper(county))
+
+NewYork2023 <- NewYork2023 |>
+  select( county = County, Graduation_Rate = `Graduation rate 2023`) |>
+  mutate( county = toupper(county)) |>
+  filter( Graduation_Rate != "N/A" ) |> 
+  mutate( Graduation_Rate = as.numeric( sub("%","",Graduation_Rate,fixed=TRUE) ) ) |>
+  group_by(county) |>
+  summarise(Graduation_Rate = mean(Graduation_Rate, na.rm=TRUE ))
+
+```
+```{r}
+NewYork2023 <- left_join(NewYork2023, NewYorkPop)
+
+NewYork2023 <- NewYork2023 |>
+  mutate(Graduation_Rate = substr( Graduation_Rate, start = 1, stop = 4)) |>
+  mutate( Graduation_Rate = as.numeric( Graduation_Rate ) )
+  
+```
+
+## New York Graph (Equal Scale)
+```{r}
+### New York Graph ###
+NewYork2023 |>
+  ggplot(aes(x = densityMi, y = Graduation_Rate)) +
+  geom_point() +
+  labs( x = 'density', y = 'Grad Rate', title = 'Data') + 
+  xlim(0 , 3600) + ylim(65, 100)
+```
+
+## New York Graph (True Scale)
+```{r}
+NewYork2023 |>
+  ggplot(aes(x = densityMi, y = Graduation_Rate)) +
+  geom_point() +
+  labs( x = 'density', y = 'Grad Rate', title = 'Data') + 
+  xlim(0 , 75000) + ylim(65, 100)
+```
+
+```{r}
+### Ney York Map Data
+NewYork <- us |> filter( NAME_1 == "New York")
+
+tmap_mode("plot")
+
+NewYork <- NewYork |>
+  mutate( NAME_2 = toupper(NAME_2))
+NewYork <- left_join( NewYork, NewYork2023 |> rename( NAME_2 = county ) )
+```
+
+## New York Graduation Rate Map
+```{r}
+tm_shape( NewYork ) + 
+  tm_polygons( id = "NAME_2", fill = "Graduation_Rate", palette = "greens", style = "jenks")
+```
+
+## New York Population Density Map
+```{r}
+tm_shape( NewYork ) +
+  tm_polygons( id = "NAME_2", fill = "densityMi", palette = "blues", breaks = c(0, 5, 10, 25, 50, 200, 500, 2500, 5000, 20000, 50000))
+```
+
+## Summary Florida
+```{r}
+Florida2023 |>
+  summarise(
+    `avg Grad Rate` = mean(Graduation_Rate),
+    `min Grad Rate` = min(Graduation_Rate),
+    `max Grad Rate` = max(Graduation_Rate),
+    `avg Density` = mean(densityMi),
+    `min Density` = min(densityMi),
+    `max Density` = max(densityMi)
+  ) |> 
+  tt()
+```
+## Summary Texas
+```{r}
+Texas2023 |>
+  summarise(
+    `avg Grad Rate` = mean(Graduation_Rate),
+    `min Grad Rate` = min(Graduation_Rate),
+    `max Grad Rate` = max(Graduation_Rate),
+    `avg Density` = mean(densityMi),
+    `min Density` = min(densityMi),
+    `max Density` = max(densityMi)
+  ) |> 
+  tt()
+```
+## Summary New York 
+```{r}
+NewYork2023 |>
+  summarise(
+    `avg Grad Rate` = mean(Graduation_Rate),
+    `min Grad Rate` = min(Graduation_Rate),
+    `max Grad Rate` = max(Graduation_Rate),
+    `avg Density` = mean(densityMi, na.rm=TRUE),
+    `min Density` = min(densityMi, na.rm=TRUE),
+    `max Density` = max(densityMi, na.rm=TRUE) 
+  ) |> 
+  tt()
+```
+
+## Source of Data
+
+Our Highschool graduation data was collected from the various states Board of Education websites. Our county population data was all collected from the World Population Review website.
+
