@@ -1,0 +1,9 @@
+---
+title: "Stat100 Paper"
+author: "Charlie Hanson and Henry Lampton"
+format: html
+---
+## Introduction
+
+ Over the course of this semster we investigated the effects of Population Density on Graduation Rate on a county level in three differnt states: Florida, Texas, and New York. 
+

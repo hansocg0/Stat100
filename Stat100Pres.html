@@ -190,8 +190,8 @@ Henry Lampton and Charlie Hanson
 
     <script>
 
-      function styleCell_r17hw81vsuvil4vhnb9g(i, j, css_id) {
-          var table = document.getElementById("tinytable_r17hw81vsuvil4vhnb9g");
+      function styleCell_nim0hwxdxge9rsk0rwsu(i, j, css_id) {
+          var table = document.getElementById("tinytable_nim0hwxdxge9rsk0rwsu");
           var cell = table.rows[i]?.cells[j];  // Safe navigation to avoid errors
           if (cell) {
               console.log(`Styling cell at (${i}, ${j}) with class ${css_id}`);
@@ -201,7 +201,7 @@ Henry Lampton and Charlie Hanson
           }
       }
       function insertSpanRow(i, colspan, content) {
-        var table = document.getElementById('tinytable_r17hw81vsuvil4vhnb9g');
+        var table = document.getElementById('tinytable_nim0hwxdxge9rsk0rwsu');
         var newRow = table.insertRow(i);
         var newCell = newRow.insertCell(0);
         newCell.setAttribute("colspan", colspan);
@@ -209,8 +209,8 @@ Henry Lampton and Charlie Hanson
         // this may be unsafe, but innerText does not interpret <br>
         newCell.innerHTML = content;
       }
-      function spanCell_r17hw81vsuvil4vhnb9g(i, j, rowspan, colspan) {
-        var table = document.getElementById("tinytable_r17hw81vsuvil4vhnb9g");
+      function spanCell_nim0hwxdxge9rsk0rwsu(i, j, rowspan, colspan) {
+        var table = document.getElementById("tinytable_nim0hwxdxge9rsk0rwsu");
         const targetRow = table.rows[i];
         const targetCell = targetRow.cells[j];
         for (let r = 0; r < rowspan; r++) {
@@ -240,14 +240,14 @@ Henry Lampton and Charlie Hanson
       window.addEventListener('load', function () {
           var cellsToStyle = [
             // tinytable style arrays after
-          { positions: [ { i: 1, j: 0 }, { i: 1, j: 1 }, { i: 1, j: 2 }, { i: 1, j: 3 }, { i: 1, j: 4 }, { i: 1, j: 5 },  ], css_id: 'tinytable_css_3yql2k0oj1hwy6bnknip',}, 
-          { positions: [ { i: 0, j: 0 }, { i: 0, j: 1 }, { i: 0, j: 2 }, { i: 0, j: 3 }, { i: 0, j: 4 }, { i: 0, j: 5 },  ], css_id: 'tinytable_css_d68u38yku151nqugft1d',}, 
+          { positions: [ { i: 1, j: 0 }, { i: 1, j: 1 }, { i: 1, j: 2 }, { i: 1, j: 3 }, { i: 1, j: 4 }, { i: 1, j: 5 },  ], css_id: 'tinytable_css_5d7j5u76ikaoe99j4vpf',}, 
+          { positions: [ { i: 0, j: 0 }, { i: 0, j: 1 }, { i: 0, j: 2 }, { i: 0, j: 3 }, { i: 0, j: 4 }, { i: 0, j: 5 },  ], css_id: 'tinytable_css_m5qi5a8x7prvgr3y6u6j',}, 
           ];
 
           // Loop over the arrays to style the cells
           cellsToStyle.forEach(function (group) {
               group.positions.forEach(function (cell) {
-                  styleCell_r17hw81vsuvil4vhnb9g(cell.i, cell.j, group.css_id);
+                  styleCell_nim0hwxdxge9rsk0rwsu(cell.i, cell.j, group.css_id);
               });
           });
       });
@@ -255,11 +255,11 @@ Henry Lampton and Charlie Hanson
 
     <style>
       /* tinytable css entries after */
-      .table td.tinytable_css_3yql2k0oj1hwy6bnknip, .table th.tinytable_css_3yql2k0oj1hwy6bnknip { border-bottom: solid #d3d8dc 0.1em; }
-      .table td.tinytable_css_d68u38yku151nqugft1d, .table th.tinytable_css_d68u38yku151nqugft1d { border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
+      .table td.tinytable_css_5d7j5u76ikaoe99j4vpf, .table th.tinytable_css_5d7j5u76ikaoe99j4vpf { border-bottom: solid #d3d8dc 0.1em; }
+      .table td.tinytable_css_m5qi5a8x7prvgr3y6u6j, .table th.tinytable_css_m5qi5a8x7prvgr3y6u6j { border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
     </style>
     <div class="container">
-      <table class="table table-borderless" id="tinytable_r17hw81vsuvil4vhnb9g" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+      <table class="table table-borderless" id="tinytable_nim0hwxdxge9rsk0rwsu" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
         <thead>
         
               <tr>
@@ -296,8 +296,8 @@ Henry Lampton and Charlie Hanson
 
     <script>
 
-      function styleCell_7yl9k1u1cd7lgezq6ifz(i, j, css_id) {
-          var table = document.getElementById("tinytable_7yl9k1u1cd7lgezq6ifz");
+      function styleCell_u66m0q2y16tdtrtlv9v5(i, j, css_id) {
+          var table = document.getElementById("tinytable_u66m0q2y16tdtrtlv9v5");
           var cell = table.rows[i]?.cells[j];  // Safe navigation to avoid errors
           if (cell) {
               console.log(`Styling cell at (${i}, ${j}) with class ${css_id}`);
@@ -307,7 +307,7 @@ Henry Lampton and Charlie Hanson
           }
       }
       function insertSpanRow(i, colspan, content) {
-        var table = document.getElementById('tinytable_7yl9k1u1cd7lgezq6ifz');
+        var table = document.getElementById('tinytable_u66m0q2y16tdtrtlv9v5');
         var newRow = table.insertRow(i);
         var newCell = newRow.insertCell(0);
         newCell.setAttribute("colspan", colspan);
@@ -315,8 +315,8 @@ Henry Lampton and Charlie Hanson
         // this may be unsafe, but innerText does not interpret <br>
         newCell.innerHTML = content;
       }
-      function spanCell_7yl9k1u1cd7lgezq6ifz(i, j, rowspan, colspan) {
-        var table = document.getElementById("tinytable_7yl9k1u1cd7lgezq6ifz");
+      function spanCell_u66m0q2y16tdtrtlv9v5(i, j, rowspan, colspan) {
+        var table = document.getElementById("tinytable_u66m0q2y16tdtrtlv9v5");
         const targetRow = table.rows[i];
         const targetCell = targetRow.cells[j];
         for (let r = 0; r < rowspan; r++) {
@@ -346,14 +346,14 @@ Henry Lampton and Charlie Hanson
       window.addEventListener('load', function () {
           var cellsToStyle = [
             // tinytable style arrays after
-          { positions: [ { i: 1, j: 0 }, { i: 1, j: 1 }, { i: 1, j: 2 }, { i: 1, j: 3 }, { i: 1, j: 4 }, { i: 1, j: 5 },  ], css_id: 'tinytable_css_6jz5rujue17bt8gtz5ol',}, 
-          { positions: [ { i: 0, j: 0 }, { i: 0, j: 1 }, { i: 0, j: 2 }, { i: 0, j: 3 }, { i: 0, j: 4 }, { i: 0, j: 5 },  ], css_id: 'tinytable_css_54rag1o08wm0rn62a6p1',}, 
+          { positions: [ { i: 1, j: 0 }, { i: 1, j: 1 }, { i: 1, j: 2 }, { i: 1, j: 3 }, { i: 1, j: 4 }, { i: 1, j: 5 },  ], css_id: 'tinytable_css_761nfam5r71p0v2u5bqe',}, 
+          { positions: [ { i: 0, j: 0 }, { i: 0, j: 1 }, { i: 0, j: 2 }, { i: 0, j: 3 }, { i: 0, j: 4 }, { i: 0, j: 5 },  ], css_id: 'tinytable_css_xy4cjufcz2lntoivd7fz',}, 
           ];
 
           // Loop over the arrays to style the cells
           cellsToStyle.forEach(function (group) {
               group.positions.forEach(function (cell) {
-                  styleCell_7yl9k1u1cd7lgezq6ifz(cell.i, cell.j, group.css_id);
+                  styleCell_u66m0q2y16tdtrtlv9v5(cell.i, cell.j, group.css_id);
               });
           });
       });
@@ -361,11 +361,11 @@ Henry Lampton and Charlie Hanson
 
     <style>
       /* tinytable css entries after */
-      .table td.tinytable_css_6jz5rujue17bt8gtz5ol, .table th.tinytable_css_6jz5rujue17bt8gtz5ol { border-bottom: solid #d3d8dc 0.1em; }
-      .table td.tinytable_css_54rag1o08wm0rn62a6p1, .table th.tinytable_css_54rag1o08wm0rn62a6p1 { border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
+      .table td.tinytable_css_761nfam5r71p0v2u5bqe, .table th.tinytable_css_761nfam5r71p0v2u5bqe { border-bottom: solid #d3d8dc 0.1em; }
+      .table td.tinytable_css_xy4cjufcz2lntoivd7fz, .table th.tinytable_css_xy4cjufcz2lntoivd7fz { border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
     </style>
     <div class="container">
-      <table class="table table-borderless" id="tinytable_7yl9k1u1cd7lgezq6ifz" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+      <table class="table table-borderless" id="tinytable_u66m0q2y16tdtrtlv9v5" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
         <thead>
         
               <tr>
@@ -402,8 +402,8 @@ Henry Lampton and Charlie Hanson
 
     <script>
 
-      function styleCell_jzelgjcer0df37ng5urw(i, j, css_id) {
-          var table = document.getElementById("tinytable_jzelgjcer0df37ng5urw");
+      function styleCell_agcdzpfq03vhsdfo4q79(i, j, css_id) {
+          var table = document.getElementById("tinytable_agcdzpfq03vhsdfo4q79");
           var cell = table.rows[i]?.cells[j];  // Safe navigation to avoid errors
           if (cell) {
               console.log(`Styling cell at (${i}, ${j}) with class ${css_id}`);
@@ -413,7 +413,7 @@ Henry Lampton and Charlie Hanson
           }
       }
       function insertSpanRow(i, colspan, content) {
-        var table = document.getElementById('tinytable_jzelgjcer0df37ng5urw');
+        var table = document.getElementById('tinytable_agcdzpfq03vhsdfo4q79');
         var newRow = table.insertRow(i);
         var newCell = newRow.insertCell(0);
         newCell.setAttribute("colspan", colspan);
@@ -421,8 +421,8 @@ Henry Lampton and Charlie Hanson
         // this may be unsafe, but innerText does not interpret <br>
         newCell.innerHTML = content;
       }
-      function spanCell_jzelgjcer0df37ng5urw(i, j, rowspan, colspan) {
-        var table = document.getElementById("tinytable_jzelgjcer0df37ng5urw");
+      function spanCell_agcdzpfq03vhsdfo4q79(i, j, rowspan, colspan) {
+        var table = document.getElementById("tinytable_agcdzpfq03vhsdfo4q79");
         const targetRow = table.rows[i];
         const targetCell = targetRow.cells[j];
         for (let r = 0; r < rowspan; r++) {
@@ -452,14 +452,14 @@ Henry Lampton and Charlie Hanson
       window.addEventListener('load', function () {
           var cellsToStyle = [
             // tinytable style arrays after
-          { positions: [ { i: 1, j: 0 }, { i: 1, j: 1 }, { i: 1, j: 2 }, { i: 1, j: 3 }, { i: 1, j: 4 }, { i: 1, j: 5 },  ], css_id: 'tinytable_css_jcfyxndvj10zvl7owy2l',}, 
-          { positions: [ { i: 0, j: 0 }, { i: 0, j: 1 }, { i: 0, j: 2 }, { i: 0, j: 3 }, { i: 0, j: 4 }, { i: 0, j: 5 },  ], css_id: 'tinytable_css_wrq361xyfne22lrthblo',}, 
+          { positions: [ { i: 1, j: 0 }, { i: 1, j: 1 }, { i: 1, j: 2 }, { i: 1, j: 3 }, { i: 1, j: 4 }, { i: 1, j: 5 },  ], css_id: 'tinytable_css_leq8hm0c6kx7622xh9b8',}, 
+          { positions: [ { i: 0, j: 0 }, { i: 0, j: 1 }, { i: 0, j: 2 }, { i: 0, j: 3 }, { i: 0, j: 4 }, { i: 0, j: 5 },  ], css_id: 'tinytable_css_t5pyb3zcsksfgep7x3wm',}, 
           ];
 
           // Loop over the arrays to style the cells
           cellsToStyle.forEach(function (group) {
               group.positions.forEach(function (cell) {
-                  styleCell_jzelgjcer0df37ng5urw(cell.i, cell.j, group.css_id);
+                  styleCell_agcdzpfq03vhsdfo4q79(cell.i, cell.j, group.css_id);
               });
           });
       });
@@ -467,11 +467,11 @@ Henry Lampton and Charlie Hanson
 
     <style>
       /* tinytable css entries after */
-      .table td.tinytable_css_jcfyxndvj10zvl7owy2l, .table th.tinytable_css_jcfyxndvj10zvl7owy2l { border-bottom: solid #d3d8dc 0.1em; }
-      .table td.tinytable_css_wrq361xyfne22lrthblo, .table th.tinytable_css_wrq361xyfne22lrthblo { border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
+      .table td.tinytable_css_leq8hm0c6kx7622xh9b8, .table th.tinytable_css_leq8hm0c6kx7622xh9b8 { border-bottom: solid #d3d8dc 0.1em; }
+      .table td.tinytable_css_t5pyb3zcsksfgep7x3wm, .table th.tinytable_css_t5pyb3zcsksfgep7x3wm { border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
     </style>
     <div class="container">
-      <table class="table table-borderless" id="tinytable_jzelgjcer0df37ng5urw" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+      <table class="table table-borderless" id="tinytable_agcdzpfq03vhsdfo4q79" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
         <thead>
         
               <tr>

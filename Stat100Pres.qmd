@@ -1,5 +1,5 @@
 ---
-title: "Stat-100-Presentation"
+title: "Population Density vs. Graduation Rate"
 author: "Henry Lampton and Charlie Hanson"
 format: revealjs
 editor_options: 
@@ -150,13 +150,6 @@ tm_shape( texas ) +
   tm_polygons( id = "NAME_2", fill = "densityMi", palette = "blues", breaks = c(0, 5, 10, 25, 50, 200, 500, 1500, 2000, 3500))
 ```
 
-## side-by-side maps
-
-```{r}
-tm_shape( texas ) +
-  tm_polygons( fill = c("Graduation_Rate","densityMi"), fill.scale = tm_scale_intervals( style="jenks", n=10) ) 
-```
-
 
 ```{r}
 ### New York ###
@@ -230,7 +223,7 @@ tm_shape( NewYork ) +
 ## New York Population Density Map
 ```{r}
 tm_shape( NewYork ) +
-  tm_polygons( id = "NAME_2", fill = "densityMi", palette = "blues", breaks = c(0, 5, 10, 25, 50, 200, 500, 2500, 5000, 20000, 50000))
+  tm_polygons( id = "NAME_2", fill = "densityMi", palette = "blues", breaks = c(0, 10, 50, 100, 150, 200, 500, 2500, 5000, 20000, 50000))
 ```
 
 ## Summary Florida
