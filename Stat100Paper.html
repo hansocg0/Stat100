@@ -73,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>Throughout this semester, we studied population density by county’s effect on graduation rate over several of the largest and most highly populous states. These were Florida, New York, and Texas. We gathered graduation data from the board of education websites from each of these states and the population by county data from the World Population Review website. Our hypothesis was that the counties with lower population density would generally have a greater graduation rate. We began with Florida. The third most highly populated state in the US, it had the least variance from its most dense county to its least.</p>
-<p>This graph depicts the Florida graduation rate on the Y-axis and the population density on the X-axis. In Florida, the higher population counties are typically found above the mean graduation rate(85%), and this seems to contradict our hypothesis. The highest population county, Pinellas, is in fact slightly above the mean graduation rate at 87.6%. The least populace county is Liberty county which sits comfortably below the mean at 9.4 people per square mile. Again this contradicts our hypothesis.</p>
+<p>This graph depicts the Florida graduation rate on the Y-axis and the population density on the X-axis. In Florida, the higher population counties are typically found above the mean graduation rate(85%), and this seems to contradict our hypothesis. The highest population county, Pinellas, is in fact slightly above the mean graduation rate at 87.6%. The least populace county is Liberty county which sits comfortably below the mean with a graduation rate of 72.5%. Again this contradicts our hypothesis.</p>
 </section>
 <section id="florida-graph" class="level2">
 <h2 class="anchored" data-anchor-id="florida-graph">Florida Graph</h2>
@@ -125,8 +125,8 @@ assigned to the highest interval</code></pre>
 
     <script>
 
-      function styleCell_4k6g3wutua56lowdw7tl(i, j, css_id) {
-          var table = document.getElementById("tinytable_4k6g3wutua56lowdw7tl");
+      function styleCell_w5jqpgbuw4ef024nxmw1(i, j, css_id) {
+          var table = document.getElementById("tinytable_w5jqpgbuw4ef024nxmw1");
           var cell = table.rows[i]?.cells[j];  // Safe navigation to avoid errors
           if (cell) {
               console.log(`Styling cell at (${i}, ${j}) with class ${css_id}`);
@@ -136,7 +136,7 @@ assigned to the highest interval</code></pre>
           }
       }
       function insertSpanRow(i, colspan, content) {
-        var table = document.getElementById('tinytable_4k6g3wutua56lowdw7tl');
+        var table = document.getElementById('tinytable_w5jqpgbuw4ef024nxmw1');
         var newRow = table.insertRow(i);
         var newCell = newRow.insertCell(0);
         newCell.setAttribute("colspan", colspan);
@@ -144,8 +144,8 @@ assigned to the highest interval</code></pre>
         // this may be unsafe, but innerText does not interpret <br>
         newCell.innerHTML = content;
       }
-      function spanCell_4k6g3wutua56lowdw7tl(i, j, rowspan, colspan) {
-        var table = document.getElementById("tinytable_4k6g3wutua56lowdw7tl");
+      function spanCell_w5jqpgbuw4ef024nxmw1(i, j, rowspan, colspan) {
+        var table = document.getElementById("tinytable_w5jqpgbuw4ef024nxmw1");
         const targetRow = table.rows[i];
         const targetCell = targetRow.cells[j];
         for (let r = 0; r < rowspan; r++) {
@@ -175,14 +175,14 @@ assigned to the highest interval</code></pre>
       window.addEventListener('load', function () {
           var cellsToStyle = [
             // tinytable style arrays after
-          { positions: [ { i: 1, j: 0 }, { i: 1, j: 1 }, { i: 1, j: 2 }, { i: 1, j: 3 }, { i: 1, j: 4 }, { i: 1, j: 5 },  ], css_id: 'tinytable_css_as0aydynyik9fszsju9w',}, 
-          { positions: [ { i: 0, j: 0 }, { i: 0, j: 1 }, { i: 0, j: 2 }, { i: 0, j: 3 }, { i: 0, j: 4 }, { i: 0, j: 5 },  ], css_id: 'tinytable_css_10i6za84jsz6kfoeqqwa',}, 
+          { positions: [ { i: 1, j: 0 }, { i: 1, j: 1 }, { i: 1, j: 2 }, { i: 1, j: 3 }, { i: 1, j: 4 }, { i: 1, j: 5 },  ], css_id: 'tinytable_css_cg8iszmol24c7hmpkp1z',}, 
+          { positions: [ { i: 0, j: 0 }, { i: 0, j: 1 }, { i: 0, j: 2 }, { i: 0, j: 3 }, { i: 0, j: 4 }, { i: 0, j: 5 },  ], css_id: 'tinytable_css_jf3v7mx1oilypwtmdd2f',}, 
           ];
 
           // Loop over the arrays to style the cells
           cellsToStyle.forEach(function (group) {
               group.positions.forEach(function (cell) {
-                  styleCell_4k6g3wutua56lowdw7tl(cell.i, cell.j, group.css_id);
+                  styleCell_w5jqpgbuw4ef024nxmw1(cell.i, cell.j, group.css_id);
               });
           });
       });
@@ -190,11 +190,11 @@ assigned to the highest interval</code></pre>
 
     <style>
       /* tinytable css entries after */
-      .table td.tinytable_css_as0aydynyik9fszsju9w, .table th.tinytable_css_as0aydynyik9fszsju9w { border-bottom: solid #d3d8dc 0.1em; }
-      .table td.tinytable_css_10i6za84jsz6kfoeqqwa, .table th.tinytable_css_10i6za84jsz6kfoeqqwa { border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
+      .table td.tinytable_css_cg8iszmol24c7hmpkp1z, .table th.tinytable_css_cg8iszmol24c7hmpkp1z { border-bottom: solid #d3d8dc 0.1em; }
+      .table td.tinytable_css_jf3v7mx1oilypwtmdd2f, .table th.tinytable_css_jf3v7mx1oilypwtmdd2f { border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
     </style>
     <div class="container">
-      <table class="table table-borderless" id="tinytable_4k6g3wutua56lowdw7tl" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+      <table class="table table-borderless" id="tinytable_w5jqpgbuw4ef024nxmw1" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
         <thead>
         
               <tr>
@@ -224,6 +224,7 @@ assigned to the highest interval</code></pre>
 </div>
 <p>On average the counties with high population density performed around the mean of graduation rate while the counties of lower density had both the highest and lowest graduation rate. This lead us to speculate that there were factors at play that had more of an effect than the population density overall.</p>
 <p>The next state was Texas. The second biggest state in the US, it was the largest we gathered data from in both population and actual land area.</p>
+<p>This graph depicts the Texas graduation rate on the Y-axis and the population density on the X-axis. Most of the high population counties in Texas are below the mean graduation rate but the Texas mean is much higher than both of the other states at 94.5%. The highest population county was Dallas which fell well below the mean at an 82.5% graduation rate. The county with the lowest population is King county with a 100% graduation rate. This is likely due to this county being on the King Ranch property and having almost no one on it.</p>
 </section>
 <section id="texas-graph" class="level2">
 <h2 class="anchored" data-anchor-id="texas-graph">Texas Graph</h2>
@@ -240,6 +241,7 @@ assigned to the highest interval</code></pre>
 </div>
 </div>
 </div>
+<p>The higher population Texan counties tend to hover beneath the mean. The lower population counties are generally better performing and are on average below the mean graduation rate. The low population counties have both the lowest and highest graduation rates.</p>
 </section>
 <section id="texas-graduation-rate-map" class="level2">
 <h2 class="anchored" data-anchor-id="texas-graduation-rate-map">Texas Graduation Rate Map</h2>
@@ -252,6 +254,7 @@ assigned to the highest interval</code></pre>
 </div>
 </div>
 </div>
+<p>The panhandle of Texas has an extremely high graduation rate with only a few outliers. The center of Texas also has a few counties with a higher comparitive graduation rate but the majority is very uniform. The Texas-Louisiana border also has several high performing counties.</p>
 </section>
 <section id="texas-population-density-map" class="level2">
 <h2 class="anchored" data-anchor-id="texas-population-density-map">Texas Population Density Map</h2>
@@ -264,6 +267,7 @@ assigned to the highest interval</code></pre>
 </div>
 </div>
 </div>
+<p>The panhandle is again an abnormality. It has an extremely low population density with those few counties with a higher density being the earlier mentioned counties struggling with their graduation rate. West Texas has an extremely low population density except for the westmost county, El Paso which has a higher than average population density. The three most dense counties are Dallas and Tarrant, which are right next to each other, and Harris county, which contains Houston.</p>
 </section>
 <section id="summary-texas" class="level2">
 <h2 class="anchored" data-anchor-id="summary-texas">Summary Texas</h2>
@@ -273,8 +277,8 @@ assigned to the highest interval</code></pre>
 
     <script>
 
-      function styleCell_xb240si1b1gwo517nggs(i, j, css_id) {
-          var table = document.getElementById("tinytable_xb240si1b1gwo517nggs");
+      function styleCell_xkzs9yk4xlhhdvtrbw6m(i, j, css_id) {
+          var table = document.getElementById("tinytable_xkzs9yk4xlhhdvtrbw6m");
           var cell = table.rows[i]?.cells[j];  // Safe navigation to avoid errors
           if (cell) {
               console.log(`Styling cell at (${i}, ${j}) with class ${css_id}`);
@@ -284,7 +288,7 @@ assigned to the highest interval</code></pre>
           }
       }
       function insertSpanRow(i, colspan, content) {
-        var table = document.getElementById('tinytable_xb240si1b1gwo517nggs');
+        var table = document.getElementById('tinytable_xkzs9yk4xlhhdvtrbw6m');
         var newRow = table.insertRow(i);
         var newCell = newRow.insertCell(0);
         newCell.setAttribute("colspan", colspan);
@@ -292,8 +296,8 @@ assigned to the highest interval</code></pre>
         // this may be unsafe, but innerText does not interpret <br>
         newCell.innerHTML = content;
       }
-      function spanCell_xb240si1b1gwo517nggs(i, j, rowspan, colspan) {
-        var table = document.getElementById("tinytable_xb240si1b1gwo517nggs");
+      function spanCell_xkzs9yk4xlhhdvtrbw6m(i, j, rowspan, colspan) {
+        var table = document.getElementById("tinytable_xkzs9yk4xlhhdvtrbw6m");
         const targetRow = table.rows[i];
         const targetCell = targetRow.cells[j];
         for (let r = 0; r < rowspan; r++) {
@@ -323,14 +327,14 @@ assigned to the highest interval</code></pre>
       window.addEventListener('load', function () {
           var cellsToStyle = [
             // tinytable style arrays after
-          { positions: [ { i: 1, j: 0 }, { i: 1, j: 1 }, { i: 1, j: 2 }, { i: 1, j: 3 }, { i: 1, j: 4 }, { i: 1, j: 5 },  ], css_id: 'tinytable_css_f3wk496l1mruhctj5o1o',}, 
-          { positions: [ { i: 0, j: 0 }, { i: 0, j: 1 }, { i: 0, j: 2 }, { i: 0, j: 3 }, { i: 0, j: 4 }, { i: 0, j: 5 },  ], css_id: 'tinytable_css_3n1ril8c7aql3ekkiuxq',}, 
+          { positions: [ { i: 1, j: 0 }, { i: 1, j: 1 }, { i: 1, j: 2 }, { i: 1, j: 3 }, { i: 1, j: 4 }, { i: 1, j: 5 },  ], css_id: 'tinytable_css_c1nz8gr19e3tcm1fn2fi',}, 
+          { positions: [ { i: 0, j: 0 }, { i: 0, j: 1 }, { i: 0, j: 2 }, { i: 0, j: 3 }, { i: 0, j: 4 }, { i: 0, j: 5 },  ], css_id: 'tinytable_css_e2oe9pvhywxg2j3ajpvb',}, 
           ];
 
           // Loop over the arrays to style the cells
           cellsToStyle.forEach(function (group) {
               group.positions.forEach(function (cell) {
-                  styleCell_xb240si1b1gwo517nggs(cell.i, cell.j, group.css_id);
+                  styleCell_xkzs9yk4xlhhdvtrbw6m(cell.i, cell.j, group.css_id);
               });
           });
       });
@@ -338,11 +342,11 @@ assigned to the highest interval</code></pre>
 
     <style>
       /* tinytable css entries after */
-      .table td.tinytable_css_f3wk496l1mruhctj5o1o, .table th.tinytable_css_f3wk496l1mruhctj5o1o { border-bottom: solid #d3d8dc 0.1em; }
-      .table td.tinytable_css_3n1ril8c7aql3ekkiuxq, .table th.tinytable_css_3n1ril8c7aql3ekkiuxq { border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
+      .table td.tinytable_css_c1nz8gr19e3tcm1fn2fi, .table th.tinytable_css_c1nz8gr19e3tcm1fn2fi { border-bottom: solid #d3d8dc 0.1em; }
+      .table td.tinytable_css_e2oe9pvhywxg2j3ajpvb, .table th.tinytable_css_e2oe9pvhywxg2j3ajpvb { border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
     </style>
     <div class="container">
-      <table class="table table-borderless" id="tinytable_xb240si1b1gwo517nggs" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+      <table class="table table-borderless" id="tinytable_xkzs9yk4xlhhdvtrbw6m" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
         <thead>
         
               <tr>
@@ -370,6 +374,7 @@ assigned to the highest interval</code></pre>
 <!-- hack to avoid NA insertion in last line -->
 </div>
 </div>
+<p>The lowest density counties in the panhandle all had extremely high graduation rates. The particularly interesting thing was the higher population counties that they surround all did significantly worse comparatively. A trend we noticed was that around the hyper dense counties that had low graduation rates, the lower density counties surrounding all performed much better. This was especially true with the El Paso, Dallas, and Tarrant counties.</p>
 </section>
 
 </main>
