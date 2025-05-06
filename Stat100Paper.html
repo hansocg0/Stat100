@@ -72,8 +72,16 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<<<<<<< HEAD
 <p>Throughout this semester, we studied population density by county’s effect on graduation rate over several of the largest and most highly populous states. These were Florida, New York, and Texas. We gathered graduation data from the board of education websites from each of these states and the population by county data from the World Population Review website. Our hypothesis was that the counties with lower population density would generally have a greater graduation rate. We began with Florida. The third most highly populated state in the US, it had the least variance from its most dense county to its least.</p>
 <p>This graph depicts the Florida graduation rate on the Y-axis and the population density on the X-axis. In Florida, the higher population counties are typically found above the mean graduation rate(85%), and this seems to contradict our hypothesis. The highest population county, Pinellas, is in fact slightly above the mean graduation rate at 87.6%. The least populace county is Liberty county which sits comfortably below the mean with a graduation rate of 72.5%. Again this contradicts our hypothesis.</p>
+=======
+<p>Throughout this semester, we studied population density by county’s effect on graduation rate over several of the largest and most highly populous states. These were Florida, New York, and Texas. We gathered graduation data from the board of education websites from each of these states and the population by county data from the World Population Review website. Our hypothesis was that the counties with lower population density would generally have a greater graduation rate.</p>
+</section>
+<section id="florida" class="level2">
+<h2 class="anchored" data-anchor-id="florida">Florida</h2>
+<p>We began with Florida. The third most highly populated state in the US, it had the least variance from its most dense county to its least.</p>
+>>>>>>> 7f708dbacf96f9e175b103e6928b137f630a7f9e
 </section>
 <section id="florida-graph" class="level2">
 <h2 class="anchored" data-anchor-id="florida-graph">Florida Graph</h2>
@@ -86,7 +94,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>Florida’s graduation rate is highest on average around the southern tip of the state. The panhandle has an interesting mix of counties with both very high graduation rates and also some of the lowest in the state. The middle of the state is fairly average but has a few standouts in both directions.</p>
+<p>This graph depicts the Florida graduation rate on the Y-axis and the population density on the X-axis. In Florida, the higher population counties are typically found above the mean graduation rate(85%), and this seems to contradict our hypothesis. The highest population county, Pinellas, is in fact slightly above the mean graduation rate at 87.6%. The least populace county is Liberty county which sits comfortably below the mean with a graduation rate of 72.5%. Again this contradicts our hypothesis.</p>
 </section>
 <section id="florida-graduation-rate-map" class="level2">
 <h2 class="anchored" data-anchor-id="florida-graduation-rate-map">Florida Graduation Rate Map</h2>
@@ -99,7 +107,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>The population is high in the southern tip and middle of Florida with a small group of counties clustered in the south with very low population densities. The pan handle is extremely sparse and only has about four counties with populations of any relevant size.</p>
+<p>Florida’s graduation rate is highest on average around the southern tip of the state. The panhandle has an interesting mix of counties with both very high graduation rates and also some of the lowest in the state. The middle of the state is fairly average but has a few standouts in both directions.</p>
 </section>
 <section id="florida-population-density-map" class="level2">
 <h2 class="anchored" data-anchor-id="florida-population-density-map">Florida Population Density Map</h2>
@@ -116,6 +124,7 @@ assigned to the highest interval</code></pre>
 </div>
 </div>
 </div>
+<p>The population is high in the southern tip and middle of Florida with a small group of counties clustered in the south with very low population densities. The pan handle is extremely sparse and only has about four counties with populations of any relevant size.</p>
 </section>
 <section id="summary-florida" class="level2">
 <h2 class="anchored" data-anchor-id="summary-florida">Summary Florida</h2>
@@ -125,8 +134,13 @@ assigned to the highest interval</code></pre>
 
     <script>
 
+<<<<<<< HEAD
       function styleCell_w5jqpgbuw4ef024nxmw1(i, j, css_id) {
           var table = document.getElementById("tinytable_w5jqpgbuw4ef024nxmw1");
+=======
+      function styleCell_it4swy40t2cmczwod3rj(i, j, css_id) {
+          var table = document.getElementById("tinytable_it4swy40t2cmczwod3rj");
+>>>>>>> 7f708dbacf96f9e175b103e6928b137f630a7f9e
           var cell = table.rows[i]?.cells[j];  // Safe navigation to avoid errors
           if (cell) {
               console.log(`Styling cell at (${i}, ${j}) with class ${css_id}`);
@@ -136,7 +150,11 @@ assigned to the highest interval</code></pre>
           }
       }
       function insertSpanRow(i, colspan, content) {
+<<<<<<< HEAD
         var table = document.getElementById('tinytable_w5jqpgbuw4ef024nxmw1');
+=======
+        var table = document.getElementById('tinytable_it4swy40t2cmczwod3rj');
+>>>>>>> 7f708dbacf96f9e175b103e6928b137f630a7f9e
         var newRow = table.insertRow(i);
         var newCell = newRow.insertCell(0);
         newCell.setAttribute("colspan", colspan);
@@ -144,8 +162,13 @@ assigned to the highest interval</code></pre>
         // this may be unsafe, but innerText does not interpret <br>
         newCell.innerHTML = content;
       }
+<<<<<<< HEAD
       function spanCell_w5jqpgbuw4ef024nxmw1(i, j, rowspan, colspan) {
         var table = document.getElementById("tinytable_w5jqpgbuw4ef024nxmw1");
+=======
+      function spanCell_it4swy40t2cmczwod3rj(i, j, rowspan, colspan) {
+        var table = document.getElementById("tinytable_it4swy40t2cmczwod3rj");
+>>>>>>> 7f708dbacf96f9e175b103e6928b137f630a7f9e
         const targetRow = table.rows[i];
         const targetCell = targetRow.cells[j];
         for (let r = 0; r < rowspan; r++) {
@@ -175,14 +198,23 @@ assigned to the highest interval</code></pre>
       window.addEventListener('load', function () {
           var cellsToStyle = [
             // tinytable style arrays after
+<<<<<<< HEAD
           { positions: [ { i: 1, j: 0 }, { i: 1, j: 1 }, { i: 1, j: 2 }, { i: 1, j: 3 }, { i: 1, j: 4 }, { i: 1, j: 5 },  ], css_id: 'tinytable_css_cg8iszmol24c7hmpkp1z',}, 
           { positions: [ { i: 0, j: 0 }, { i: 0, j: 1 }, { i: 0, j: 2 }, { i: 0, j: 3 }, { i: 0, j: 4 }, { i: 0, j: 5 },  ], css_id: 'tinytable_css_jf3v7mx1oilypwtmdd2f',}, 
+=======
+          { positions: [ { i: 1, j: 0 }, { i: 1, j: 1 }, { i: 1, j: 2 }, { i: 1, j: 3 }, { i: 1, j: 4 }, { i: 1, j: 5 },  ], css_id: 'tinytable_css_s8jw0a38kntu0lih7wcz',}, 
+          { positions: [ { i: 0, j: 0 }, { i: 0, j: 1 }, { i: 0, j: 2 }, { i: 0, j: 3 }, { i: 0, j: 4 }, { i: 0, j: 5 },  ], css_id: 'tinytable_css_utabi293igxsg2xs8nzy',}, 
+>>>>>>> 7f708dbacf96f9e175b103e6928b137f630a7f9e
           ];
 
           // Loop over the arrays to style the cells
           cellsToStyle.forEach(function (group) {
               group.positions.forEach(function (cell) {
+<<<<<<< HEAD
                   styleCell_w5jqpgbuw4ef024nxmw1(cell.i, cell.j, group.css_id);
+=======
+                  styleCell_it4swy40t2cmczwod3rj(cell.i, cell.j, group.css_id);
+>>>>>>> 7f708dbacf96f9e175b103e6928b137f630a7f9e
               });
           });
       });
@@ -190,11 +222,19 @@ assigned to the highest interval</code></pre>
 
     <style>
       /* tinytable css entries after */
+<<<<<<< HEAD
       .table td.tinytable_css_cg8iszmol24c7hmpkp1z, .table th.tinytable_css_cg8iszmol24c7hmpkp1z { border-bottom: solid #d3d8dc 0.1em; }
       .table td.tinytable_css_jf3v7mx1oilypwtmdd2f, .table th.tinytable_css_jf3v7mx1oilypwtmdd2f { border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
     </style>
     <div class="container">
       <table class="table table-borderless" id="tinytable_w5jqpgbuw4ef024nxmw1" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+=======
+      .table td.tinytable_css_s8jw0a38kntu0lih7wcz, .table th.tinytable_css_s8jw0a38kntu0lih7wcz { border-bottom: solid #d3d8dc 0.1em; }
+      .table td.tinytable_css_utabi293igxsg2xs8nzy, .table th.tinytable_css_utabi293igxsg2xs8nzy { border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
+    </style>
+    <div class="container">
+      <table class="table table-borderless" id="tinytable_it4swy40t2cmczwod3rj" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+>>>>>>> 7f708dbacf96f9e175b103e6928b137f630a7f9e
         <thead>
         
               <tr>
@@ -223,6 +263,9 @@ assigned to the highest interval</code></pre>
 </div>
 </div>
 <p>On average the counties with high population density performed around the mean of graduation rate while the counties of lower density had both the highest and lowest graduation rate. This lead us to speculate that there were factors at play that had more of an effect than the population density overall.</p>
+</section>
+<section id="texas" class="level2">
+<h2 class="anchored" data-anchor-id="texas">Texas</h2>
 <p>The next state was Texas. The second biggest state in the US, it was the largest we gathered data from in both population and actual land area.</p>
 <p>This graph depicts the Texas graduation rate on the Y-axis and the population density on the X-axis. Most of the high population counties in Texas are below the mean graduation rate but the Texas mean is much higher than both of the other states at 94.5%. The highest population county was Dallas which fell well below the mean at an 82.5% graduation rate. The county with the lowest population is King county with a 100% graduation rate. This is likely due to this county being on the King Ranch property and having almost no one on it.</p>
 </section>
@@ -277,8 +320,13 @@ assigned to the highest interval</code></pre>
 
     <script>
 
+<<<<<<< HEAD
       function styleCell_xkzs9yk4xlhhdvtrbw6m(i, j, css_id) {
           var table = document.getElementById("tinytable_xkzs9yk4xlhhdvtrbw6m");
+=======
+      function styleCell_25f5i35uvos2zkxhbxt8(i, j, css_id) {
+          var table = document.getElementById("tinytable_25f5i35uvos2zkxhbxt8");
+>>>>>>> 7f708dbacf96f9e175b103e6928b137f630a7f9e
           var cell = table.rows[i]?.cells[j];  // Safe navigation to avoid errors
           if (cell) {
               console.log(`Styling cell at (${i}, ${j}) with class ${css_id}`);
@@ -288,7 +336,11 @@ assigned to the highest interval</code></pre>
           }
       }
       function insertSpanRow(i, colspan, content) {
+<<<<<<< HEAD
         var table = document.getElementById('tinytable_xkzs9yk4xlhhdvtrbw6m');
+=======
+        var table = document.getElementById('tinytable_25f5i35uvos2zkxhbxt8');
+>>>>>>> 7f708dbacf96f9e175b103e6928b137f630a7f9e
         var newRow = table.insertRow(i);
         var newCell = newRow.insertCell(0);
         newCell.setAttribute("colspan", colspan);
@@ -296,8 +348,13 @@ assigned to the highest interval</code></pre>
         // this may be unsafe, but innerText does not interpret <br>
         newCell.innerHTML = content;
       }
+<<<<<<< HEAD
       function spanCell_xkzs9yk4xlhhdvtrbw6m(i, j, rowspan, colspan) {
         var table = document.getElementById("tinytable_xkzs9yk4xlhhdvtrbw6m");
+=======
+      function spanCell_25f5i35uvos2zkxhbxt8(i, j, rowspan, colspan) {
+        var table = document.getElementById("tinytable_25f5i35uvos2zkxhbxt8");
+>>>>>>> 7f708dbacf96f9e175b103e6928b137f630a7f9e
         const targetRow = table.rows[i];
         const targetCell = targetRow.cells[j];
         for (let r = 0; r < rowspan; r++) {
@@ -327,14 +384,23 @@ assigned to the highest interval</code></pre>
       window.addEventListener('load', function () {
           var cellsToStyle = [
             // tinytable style arrays after
+<<<<<<< HEAD
           { positions: [ { i: 1, j: 0 }, { i: 1, j: 1 }, { i: 1, j: 2 }, { i: 1, j: 3 }, { i: 1, j: 4 }, { i: 1, j: 5 },  ], css_id: 'tinytable_css_c1nz8gr19e3tcm1fn2fi',}, 
           { positions: [ { i: 0, j: 0 }, { i: 0, j: 1 }, { i: 0, j: 2 }, { i: 0, j: 3 }, { i: 0, j: 4 }, { i: 0, j: 5 },  ], css_id: 'tinytable_css_e2oe9pvhywxg2j3ajpvb',}, 
+=======
+          { positions: [ { i: 1, j: 0 }, { i: 1, j: 1 }, { i: 1, j: 2 }, { i: 1, j: 3 }, { i: 1, j: 4 }, { i: 1, j: 5 },  ], css_id: 'tinytable_css_wm4krt0t1ic00qsrj1np',}, 
+          { positions: [ { i: 0, j: 0 }, { i: 0, j: 1 }, { i: 0, j: 2 }, { i: 0, j: 3 }, { i: 0, j: 4 }, { i: 0, j: 5 },  ], css_id: 'tinytable_css_sua20v18jnqefgqzhcha',}, 
+>>>>>>> 7f708dbacf96f9e175b103e6928b137f630a7f9e
           ];
 
           // Loop over the arrays to style the cells
           cellsToStyle.forEach(function (group) {
               group.positions.forEach(function (cell) {
+<<<<<<< HEAD
                   styleCell_xkzs9yk4xlhhdvtrbw6m(cell.i, cell.j, group.css_id);
+=======
+                  styleCell_25f5i35uvos2zkxhbxt8(cell.i, cell.j, group.css_id);
+>>>>>>> 7f708dbacf96f9e175b103e6928b137f630a7f9e
               });
           });
       });
@@ -342,11 +408,19 @@ assigned to the highest interval</code></pre>
 
     <style>
       /* tinytable css entries after */
+<<<<<<< HEAD
       .table td.tinytable_css_c1nz8gr19e3tcm1fn2fi, .table th.tinytable_css_c1nz8gr19e3tcm1fn2fi { border-bottom: solid #d3d8dc 0.1em; }
       .table td.tinytable_css_e2oe9pvhywxg2j3ajpvb, .table th.tinytable_css_e2oe9pvhywxg2j3ajpvb { border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
     </style>
     <div class="container">
       <table class="table table-borderless" id="tinytable_xkzs9yk4xlhhdvtrbw6m" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+=======
+      .table td.tinytable_css_wm4krt0t1ic00qsrj1np, .table th.tinytable_css_wm4krt0t1ic00qsrj1np { border-bottom: solid #d3d8dc 0.1em; }
+      .table td.tinytable_css_sua20v18jnqefgqzhcha, .table th.tinytable_css_sua20v18jnqefgqzhcha { border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
+    </style>
+    <div class="container">
+      <table class="table table-borderless" id="tinytable_25f5i35uvos2zkxhbxt8" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+>>>>>>> 7f708dbacf96f9e175b103e6928b137f630a7f9e
         <thead>
         
               <tr>
@@ -375,6 +449,179 @@ assigned to the highest interval</code></pre>
 </div>
 </div>
 <p>The lowest density counties in the panhandle all had extremely high graduation rates. The particularly interesting thing was the higher population counties that they surround all did significantly worse comparatively. A trend we noticed was that around the hyper dense counties that had low graduation rates, the lower density counties surrounding all performed much better. This was especially true with the El Paso, Dallas, and Tarrant counties.</p>
+<<<<<<< HEAD
+=======
+</section>
+<section id="new-york" class="level2">
+<h2 class="anchored" data-anchor-id="new-york">New York</h2>
+<p>The next state is New York, the fourth most populous state in the US, it had the highest variance by far between its least dense and most dense county.</p>
+</section>
+<section id="new-york-graph-equal-scale" class="level2">
+<h2 class="anchored" data-anchor-id="new-york-graph-equal-scale">New York Graph (Equal Scale)</h2>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 7 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Stat100Paper_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="new-york-graph-true-scale" class="level2">
+<h2 class="anchored" data-anchor-id="new-york-graph-true-scale">New York Graph (True Scale)</h2>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 1 row containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Stat100Paper_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="new-york-graduation-rate-map" class="level2">
+<h2 class="anchored" data-anchor-id="new-york-graduation-rate-map">New York Graduation Rate Map</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Stat100Paper_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="new-york-population-density-map" class="level2">
+<h2 class="anchored" data-anchor-id="new-york-population-density-map">New York Population Density Map</h2>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Values have found that are higher than the highest break. They are
+assigned to the highest interval</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Stat100Paper_files/figure-html/unnamed-chunk-24-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="summary-new-york" class="level2">
+<h2 class="anchored" data-anchor-id="summary-new-york">Summary New York</h2>
+<div class="cell">
+<div class="cell-output-display">
+<!-- preamble start -->
+
+    <script>
+
+      function styleCell_prjhxe68djr1annb9eo0(i, j, css_id) {
+          var table = document.getElementById("tinytable_prjhxe68djr1annb9eo0");
+          var cell = table.rows[i]?.cells[j];  // Safe navigation to avoid errors
+          if (cell) {
+              console.log(`Styling cell at (${i}, ${j}) with class ${css_id}`);
+              cell.classList.add(css_id);
+          } else {
+              console.warn(`Cell at (${i}, ${j}) not found.`);
+          }
+      }
+      function insertSpanRow(i, colspan, content) {
+        var table = document.getElementById('tinytable_prjhxe68djr1annb9eo0');
+        var newRow = table.insertRow(i);
+        var newCell = newRow.insertCell(0);
+        newCell.setAttribute("colspan", colspan);
+        // newCell.innerText = content;
+        // this may be unsafe, but innerText does not interpret <br>
+        newCell.innerHTML = content;
+      }
+      function spanCell_prjhxe68djr1annb9eo0(i, j, rowspan, colspan) {
+        var table = document.getElementById("tinytable_prjhxe68djr1annb9eo0");
+        const targetRow = table.rows[i];
+        const targetCell = targetRow.cells[j];
+        for (let r = 0; r < rowspan; r++) {
+          // Only start deleting cells to the right for the first row (r == 0)
+          if (r === 0) {
+            // Delete cells to the right of the target cell in the first row
+            for (let c = colspan - 1; c > 0; c--) {
+              if (table.rows[i + r].cells[j + c]) {
+                table.rows[i + r].deleteCell(j + c);
+              }
+            }
+          }
+          // For rows below the first, delete starting from the target column
+          if (r > 0) {
+            for (let c = colspan - 1; c >= 0; c--) {
+              if (table.rows[i + r] && table.rows[i + r].cells[j]) {
+                table.rows[i + r].deleteCell(j);
+              }
+            }
+          }
+        }
+        // Set rowspan and colspan of the target cell
+        targetCell.rowSpan = rowspan;
+        targetCell.colSpan = colspan;
+      }
+      // tinytable span after
+      window.addEventListener('load', function () {
+          var cellsToStyle = [
+            // tinytable style arrays after
+          { positions: [ { i: 1, j: 0 }, { i: 1, j: 1 }, { i: 1, j: 2 }, { i: 1, j: 3 }, { i: 1, j: 4 }, { i: 1, j: 5 },  ], css_id: 'tinytable_css_y0ww32u6m91b3dpffna3',}, 
+          { positions: [ { i: 0, j: 0 }, { i: 0, j: 1 }, { i: 0, j: 2 }, { i: 0, j: 3 }, { i: 0, j: 4 }, { i: 0, j: 5 },  ], css_id: 'tinytable_css_ph9nyeg701tfwr970wyg',}, 
+          ];
+
+          // Loop over the arrays to style the cells
+          cellsToStyle.forEach(function (group) {
+              group.positions.forEach(function (cell) {
+                  styleCell_prjhxe68djr1annb9eo0(cell.i, cell.j, group.css_id);
+              });
+          });
+      });
+    </script>
+
+    <style>
+      /* tinytable css entries after */
+      .table td.tinytable_css_y0ww32u6m91b3dpffna3, .table th.tinytable_css_y0ww32u6m91b3dpffna3 { border-bottom: solid #d3d8dc 0.1em; }
+      .table td.tinytable_css_ph9nyeg701tfwr970wyg, .table th.tinytable_css_ph9nyeg701tfwr970wyg { border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
+    </style>
+    <div class="container">
+      <table class="table table-borderless" id="tinytable_prjhxe68djr1annb9eo0" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+        <thead>
+        
+              <tr>
+                <th scope="col">avg Grad Rate</th>
+                <th scope="col">min Grad Rate</th>
+                <th scope="col">max Grad Rate</th>
+                <th scope="col">avg Density</th>
+                <th scope="col">min Density</th>
+                <th scope="col">max Density</th>
+              </tr>
+        </thead>
+        
+        <tbody>
+                <tr>
+                  <td>87.44194</td>
+                  <td>69.4</td>
+                  <td>97</td>
+                  <td>3058.495</td>
+                  <td>2.914386</td>
+                  <td>69707.26</td>
+                </tr>
+        </tbody>
+      </table>
+    </div>
+<!-- hack to avoid NA insertion in last line -->
+</div>
+</div>
+>>>>>>> 7f708dbacf96f9e175b103e6928b137f630a7f9e
 </section>
 
 </main>
