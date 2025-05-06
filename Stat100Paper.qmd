@@ -8,7 +8,8 @@ editor_options:
 ## Introduction
 
  Throughout this semester, we studied population density by county's effect on graduation rate over several of the largest and most highly populous states. These were Florida, New York, and Texas. We gathered graduation data from the board of education websites from each of these states and the population by county data from the World Population Review website. Our hypothesis was that the counties with lower population density would generally have a greater graduation rate. 
-  We began with Florida. The third most highly populated state in the US, it had the least variance from its most dense county to its least. 
+ 
+
 ```{r}
 #| include: False
 library(tidyverse)
@@ -49,6 +50,8 @@ Florida2023 <- Florida2023 |>
   
 ```
 
+
+
 ```{r}
 #| include: False
 library(tmap)
@@ -66,8 +69,11 @@ tmap_mode("plot")
 florida <- left_join( florida, Florida2023 |> rename( NAME_2 = county ) |> select( -rank ) )
 ```
 
-  This graph depicts the Florida graduation rate on the Y-axis and the population density on the X-axis. In Florida, the higher population counties are typically found above the mean graduation rate(85%), and this seems to contradict our hypothesis. The highest population county, Pinellas, is in fact slightly above the mean  graduation rate at 87.6%. The least populace county is Liberty county which sits comfortably below the mean with a graduation rate of 72.5%. Again this contradicts our hypothesis. 
-  
+## Florida
+
+  We began with Florida. The third most highly populated state in the US, it had the least variance from its most dense county to its least. 
+
+
 ## Florida Graph
 ```{r}
 #| echo: FALSE
@@ -79,7 +85,8 @@ Florida2023 |>
   xlim(0 , 3600) + ylim(65, 100)
 ```
 
-  Florida's graduation rate is highest on average around the southern tip of the state. The panhandle has an interesting mix of counties with both very high graduation rates and also some of the lowest in the state. The middle of the state is fairly average but has a few standouts in both directions.
+  This graph depicts the Florida graduation rate on the Y-axis and the population density on the X-axis. In Florida, the higher population counties are typically found above the mean graduation rate(85%), and this seems to contradict our hypothesis. The highest population county, Pinellas, is in fact slightly above the mean  graduation rate at 87.6%. The least populace county is Liberty county which sits comfortably below the mean with a graduation rate of 72.5%. Again this contradicts our hypothesis. 
+
 
 ## Florida Graduation Rate Map
 
@@ -90,7 +97,8 @@ tm_shape( florida ) +
   tm_polygons( id = "NAME_2", fill = "Graduation_Rate", palette = "greens", style= "jenks")
 ```
 
-  The population is high in the southern tip and middle of Florida with a small group of counties clustered in the south with very low population densities. The pan handle is extremely sparse and only has about four counties with populations of any relevant size.
+  Florida's graduation rate is highest on average around the southern tip of the state. The panhandle has an interesting mix of counties with both very high graduation rates and also some of the lowest in the state. The middle of the state is fairly average but has a few standouts in both directions.
+
 
 ## Florida Population Density Map
 ```{r}
@@ -99,6 +107,9 @@ tm_shape( florida ) +
 tm_shape( florida ) +
   tm_polygons( id = "NAME_2", fill = "densityMi", palette = "blues", breaks = c(0, 50, 100, 200, 500, 1000, 1500, 2000, 3500))
 ```
+  
+   The population is high in the southern tip and middle of Florida with a small group of counties clustered in the south with very low population densities. The pan handle is extremely sparse and only has about four counties with populations of any relevant size. 
+  
   
 ## Summary Florida
 ```{r}
@@ -118,6 +129,8 @@ Florida2023 |>
  
   On average the counties with high population density performed around the mean of graduation rate while the counties of lower density had both the highest and lowest graduation rate. This lead us to speculate that there were factors at play that had more of an effect than the population density overall.
 
+
+## Texas
   The next state was Texas. The second biggest state in the US, it was the largest we gathered data from in both population and actual land area. 
   
 ```{r}
@@ -173,7 +186,6 @@ texas <- texas |>
 texas <- left_join( texas, Texas2023 |> rename( NAME_2 = county ) |> select( -rank ) )
 ```
 
-This graph depicts the Texas graduation rate on the Y-axis and the population density on the X-axis. Most of the high population counties in Texas are below the mean graduation rate but the Texas mean is much higher than both of the other states at 94.5%. The highest population county was Dallas which fell well below the mean at an 82.5% graduation rate. The county with the lowest population is King county with a 100% graduation rate. This is likely due to this county being on the King Ranch property and having almost no one on it.
 
 
 ## Texas Graph
@@ -188,7 +200,9 @@ Texas2023 |>
   xlim(0 , 3600) + ylim(65, 100)
 ```
 
-The higher population Texan counties tend to hover beneath the mean. The lower population counties are generally better performing and are on average below the mean graduation rate. The low population counties have both the lowest and highest graduation rates. 
+This graph depicts the Texas graduation rate on the Y-axis and the population density on the X-axis. Most of the high population counties in Texas are below the mean graduation rate but the Texas mean is much higher than both of the other states at 94.5%. The highest population county was Dallas which fell well below the mean at an 82.5% graduation rate. The county with the lowest population is King county with a 100% graduation rate. This is likely due to this county being on the King Ranch property and having almost no one on it.
+
+
 
 ## Texas Graduation Rate Map
 ```{r}
@@ -200,6 +214,7 @@ tm_shape( texas ) +
 
 The panhandle of Texas has an extremely high graduation rate with only a few outliers. The center of Texas also has a few counties with a higher comparitive graduation rate but the majority is very uniform. The Texas-Louisiana border also has several high performing counties. 
 
+
 ## Texas Population Density Map
 ```{r}
 #| echo: FALSE
@@ -209,6 +224,7 @@ tm_shape( texas ) +
 ```
 
 The panhandle is again an abnormality. It has an extremely low population density with those few counties with a higher density being the earlier mentioned counties struggling with their graduation rate. West Texas has an extremely low population density except for the westmost county, El Paso which has a higher than average population density. The three most dense counties are Dallas and Tarrant, which are right next to each other, and Harris county, which contains Houston. 
+
 
 ## Summary Texas
 ```{r}
@@ -227,6 +243,130 @@ Texas2023 |>
 ```
 
 The lowest density counties in the panhandle all had extremely high graduation rates. The particularly interesting thing was the higher population counties that they surround all did significantly worse comparatively. A trend we noticed was that around the hyper dense counties that had low graduation rates, the lower density counties surrounding all performed much better. This was especially true with the El Paso, Dallas, and Tarrant counties. 
+
+
+## New York
+The next state is New York, the fourth most populous state in the US, it had the highest variance by far between its least dense and most dense county. 
+
+```{r}
+#| include: FALSE
+
+### New York ###
+NewYork2023 <- 
+  read_csv("data-Ct345.csv")
+
+NewYorkPop <-
+  read_csv("NewYorkPop.csv")
+```
+
+```{r}
+#| include: FALSE
+
+NewYorkPop <- NewYorkPop |>
+  select(county, densityMi) |>
+  mutate(county = sub(" County", "", county, fixed= TRUE)) |>
+  mutate( county = toupper(county))
+
+NewYork2023 <- NewYork2023 |>
+  select( county = County, Graduation_Rate = `Graduation rate 2023`) |>
+  mutate( county = toupper(county)) |>
+  filter( Graduation_Rate != "N/A" ) |> 
+  mutate( Graduation_Rate = as.numeric( sub("%","",Graduation_Rate,fixed=TRUE) ) ) |>
+  group_by(county) |>
+  summarise(Graduation_Rate = mean(Graduation_Rate, na.rm=TRUE ))
+
+```
+
+```{r}
+#| include: FALSE
+
+NewYork2023 <- left_join(NewYork2023, NewYorkPop)
+
+NewYork2023 <- NewYork2023 |>
+  mutate(Graduation_Rate = substr( Graduation_Rate, start = 1, stop = 4)) |>
+  mutate( Graduation_Rate = as.numeric( Graduation_Rate ) )
+  
+```
+
+## New York Graph (Equal Scale)
+```{r}
+#| echo: FALSE
+#| message: FALSE
+### New York Graph ###
+NewYork2023 |>
+  ggplot(aes(x = densityMi, y = Graduation_Rate)) +
+  geom_point() +
+  labs( x = 'density', y = 'Grad Rate', title = 'Data') + 
+  xlim(0 , 3600) + ylim(65, 100)
+```
+
+## New York Graph (True Scale)
+```{r}
+#| echo: FALSE
+#| message: FALSE
+NewYork2023 |>
+  ggplot(aes(x = densityMi, y = Graduation_Rate)) +
+  geom_point() +
+  labs( x = 'density', y = 'Grad Rate', title = 'Data') + 
+  xlim(0 , 75000) + ylim(65, 100)
+```
+
+We created two dot plots for the state of New York because of the enormous outlier the state possesses. The first graph is shown on the same scale as the other two data sets where 4 of the counties are not visible due to the enormous population densities within them. The mean graduation rate is 87.4% which is higher than Florida's but lower than Texas'.The most dense county is New York county which falls below the mean at 81.5%. The least dense county is Hamilton county with a graduation rate well above the mean at 97%. 
+
+
+```{r}
+#| include: FALSE
+### Ney York Map Data
+NewYork <- us |> filter( NAME_1 == "New York")
+
+tmap_mode("plot")
+
+NewYork <- NewYork |>
+  mutate( NAME_2 = toupper(NAME_2))
+NewYork <- left_join( NewYork, NewYork2023 |> rename( NAME_2 = county ) )
+```
+
+## New York Graduation Rate Map
+```{r}
+#| echo: FALSE
+#| message: FALSE
+tm_shape( NewYork ) + 
+  tm_polygons( id = "NAME_2", fill = "Graduation_Rate", palette = "greens", style = "jenks")
+```
+
+New York has a fairly uniform spread with some high graduation rate counties to the West and Northeast. There is also Cortland county with an extremely low graduation rate in the dead center of the state. The most interesting region however is the Long Island area. There are seven counties in the region with 2 having some of the highest graduation rates in the state and the other 5
+having some of the lowest. 
+
+## New York Population Density Map
+```{r}
+#| echo: FALSE
+#| message: FALSE
+tm_shape( NewYork ) +
+  tm_polygons( id = "NAME_2", fill = "densityMi", palette = "blues", breaks = c(0, 10, 50, 100, 150, 200, 500, 2500, 5000, 20000, 50000))
+```
+
+New York is fairly generally populated with few hot spots besides Erie county in the far West and a few in the far East. The South however is o ne of the most densely populated zones in America. The Long Island zone has 4 counties with over 20,000 people per square mile and the other three are also quite dense. While much of the state is rural those counties stick out as metropolitan titans.
+
+
+## Summary New York 
+```{r}
+#| echo: FALSE
+NewYork2023 |>
+  summarise(
+    `avg Grad Rate` = mean(Graduation_Rate),
+    `min Grad Rate` = min(Graduation_Rate),
+    `max Grad Rate` = max(Graduation_Rate),
+    `avg Density` = mean(densityMi, na.rm=TRUE),
+    `min Density` = min(densityMi, na.rm=TRUE),
+    `max Density` = max(densityMi, na.rm=TRUE) 
+  ) |> 
+  tt()
+```
+
+The New York data is fairly uninteresting until you look at the Long Island area. Those 7 counties exhibit an enormous level of variance in both population and graduation rate from the others we looked at. The five most dense of them all have graduation rates below the mean and 3 of the 5 are at least 5 points below it. The other two however are about 4 points above it. While comparatively their densities are low, they are still impressive, with Suffolk County having 1,661.4 people per square mile and Nassau county having 4,823 people per square mile. 
+
+
+## Analyis 
 
 
 
