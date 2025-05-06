@@ -368,5 +368,11 @@ The New York data is fairly uninteresting until you look at the Long Island area
 
 ## Analyis 
 
+Our hypothesis is generally incorrect as there is no correlation between graduation rate and population density. There was a correlation with the variance in graduation rates between counties of low density and counties of high. While high density counties always stayed near the mean, it was in the lowest density that there was extreme variation in of the data that contained both the minimums and maximums of graduation rate. For all three states, the county with both the highest and lowest graduation rate was a low density county. We believe that the variance is likely caused by the lack of diversity in these low density counties. In a county like Carson, TX there will be a very similar group of people within. In Carson specifically, the population density is around 8 people per mile, the per capita income is around 84,000 dollars so the education and graduation rate is much more likely to be better, sitting at almost 98%. Conversely, in Hendry FL, a county with a graduation rate of 71% and a density of 40.8 people per square mile and has a per capita income of around 26,000 dollars so they are less likely to have access to good schools and education. This kind of relationship can explain the convergence of graduation rates in high density cities falling near the mean as urban centers like Dallas and Houston host large varieties of people that will tend to even out educational disparities in both directions resulting in a apparently normal average. There are many factors that affect graduation rate and while population density does play some role it is in no way a predictor or even one of the more prominent influencers.
+
+
+
+
+
 
 
