@@ -66,7 +66,7 @@ tmap_mode("plot")
 florida <- left_join( florida, Florida2023 |> rename( NAME_2 = county ) |> select( -rank ) )
 ```
 
-  This graph depicts the Florida graduation rate on the Y-axis and the population density on the X-axis. In Florida, the higher population counties are typically found above the mean graduation rate(85%), and this seems to contradict our hypothesis. The highest population county, Pinellas, is in fact slightly above the mean  graduation rate at 87.6%. The least populace county is Liberty county which sits comfortably below the mean at 9.4 people per square mile. Again this contradicts our hypothesis. 
+  This graph depicts the Florida graduation rate on the Y-axis and the population density on the X-axis. In Florida, the higher population counties are typically found above the mean graduation rate(85%), and this seems to contradict our hypothesis. The highest population county, Pinellas, is in fact slightly above the mean  graduation rate at 87.6%. The least populace county is Liberty county which sits comfortably below the mean with a graduation rate of 72.5%. Again this contradicts our hypothesis. 
   
 ## Florida Graph
 ```{r}
@@ -100,12 +100,133 @@ tm_shape( florida ) +
   tm_polygons( id = "NAME_2", fill = "densityMi", palette = "blues", breaks = c(0, 50, 100, 200, 500, 1000, 1500, 2000, 3500))
 ```
   
+## Summary Florida
+```{r}
+#| echo: FALSE
+Florida2023 |>
+  summarise(
+    `avg Grad Rate` = mean(Graduation_Rate),
+    `min Grad Rate` = min(Graduation_Rate),
+    `max Grad Rate` = max(Graduation_Rate),
+    `avg Density` = mean(densityMi),
+    `min Density` = min(densityMi),
+    `max Density` = max(densityMi)
+  ) |> 
+  tt()
+```
+ 
+ 
   On average the counties with high population density performed around the mean of graduation rate while the counties of lower density had both the highest and lowest graduation rate. This lead us to speculate that there were factors at play that had more of an effect than the population density overall.
 
+  The next state was Texas. The second biggest state in the US, it was the largest we gathered data from in both population and actual land area. 
   
+```{r}
+#| include: False
+
+### Texas ###
+Texas2023 <- 
+  read_excel("Texas2023.xlsx")
+
+Texas_Pop <-
+  read_csv("TexasPop.csv")
+```
+
+```{r}
+#| include: False
+
+### Clean Texas Data ###
+Texas_Pop <- Texas_Pop |>
+  select(county, densityMi, rank) |>
+  mutate(county = sub(" County", "", county, fixed= TRUE)) |>
+  mutate( county = toupper(county)) 
+
+Texas2023 <- Texas2023 |>
+  mutate(county = `County Name`)|>
+  mutate(Graduation_Rate = `Graduation Rate`) |>
+  select(county, Graduation_Rate)
+Texas2023 <- Texas2023 |>
+  mutate(county = sub(" COUNTY", "", county, fixed= TRUE))
+```
 
 
+```{r}
+#| include: False
 
+Texas2023 <- left_join(Texas2023, Texas_Pop)
+
+Texas2023 <- Texas2023 |>
+  mutate(Graduation_Rate = substr( Graduation_Rate, start = 1, stop = 4)) |>
+  mutate( Graduation_Rate = as.numeric( Graduation_Rate ) )
+```
+
+
+```{r}
+#| echo: FALSE
+#| message: FALSE
+### Texas Map Data
+texas <- us |> filter( NAME_1 == "Texas")
+
+tmap_mode("plot")
+
+texas <- texas |>
+  mutate( NAME_2 = toupper(NAME_2))
+texas <- left_join( texas, Texas2023 |> rename( NAME_2 = county ) |> select( -rank ) )
+```
+
+This graph depicts the Texas graduation rate on the Y-axis and the population density on the X-axis. Most of the high population counties in Texas are below the mean graduation rate but the Texas mean is much higher than both of the other states at 94.5%. The highest population county was Dallas which fell well below the mean at an 82.5% graduation rate. The county with the lowest population is King county with a 100% graduation rate. This is likely due to this county being on the King Ranch property and having almost no one on it.
+
+
+## Texas Graph
+```{r}
+#| echo: FALSE
+#| message: FALSE
+### Texas Graph ###
+Texas2023 |>
+  ggplot(aes(x = densityMi, y = Graduation_Rate)) +
+  geom_point() +
+  labs( x = 'density', y = 'Grad Rate', title = 'Texas Data') + 
+  xlim(0 , 3600) + ylim(65, 100)
+```
+
+The higher population Texan counties tend to hover beneath the mean. The lower population counties are generally better performing and are on average below the mean graduation rate. The low population counties have both the lowest and highest graduation rates. 
+
+## Texas Graduation Rate Map
+```{r}
+#| echo: FALSE
+#| message: FALSE
+tm_shape( texas ) + 
+  tm_polygons( id = "NAME_2", fill = "Graduation_Rate", palette = "greens", style= "jenks")
+```
+
+The panhandle of Texas has an extremely high graduation rate with only a few outliers. The center of Texas also has a few counties with a higher comparitive graduation rate but the majority is very uniform. The Texas-Louisiana border also has several high performing counties. 
+
+## Texas Population Density Map
+```{r}
+#| echo: FALSE
+#| message: FALSE
+tm_shape( texas ) +
+  tm_polygons( id = "NAME_2", fill = "densityMi", palette = "blues", breaks = c(0, 5, 10, 25, 50, 200, 500, 1500, 2000, 3500))
+```
+
+The panhandle is again an abnormality. It has an extremely low population density with those few counties with a higher density being the earlier mentioned counties struggling with their graduation rate. West Texas has an extremely low population density except for the westmost county, El Paso which has a higher than average population density. The three most dense counties are Dallas and Tarrant, which are right next to each other, and Harris county, which contains Houston. 
+
+## Summary Texas
+```{r}
+#| echo: FALSE
+#| message: FALSE
+Texas2023 |>
+  summarise(
+    `avg Grad Rate` = mean(Graduation_Rate),
+    `min Grad Rate` = min(Graduation_Rate),
+    `max Grad Rate` = max(Graduation_Rate),
+    `avg Density` = mean(densityMi),
+    `min Density` = min(densityMi),
+    `max Density` = max(densityMi)
+  ) |> 
+  tt()
+```
+
+The lowest density counties in the panhandle all had extremely high graduation rates. The particularly interesting thing was the higher population counties that they surround all did significantly worse comparatively. A trend we noticed was that around the hyper dense counties that had low graduation rates, the lower density counties surrounding all performed much better. This was especially true with the El Paso, Dallas, and Tarrant counties. 
 
 
 

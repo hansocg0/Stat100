@@ -73,7 +73,10 @@ ul.task-list li input[type="checkbox"] {
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>Throughout this semester, we studied population density by county’s effect on graduation rate over several of the largest and most highly populous states. These were Florida, New York, and Texas. We gathered graduation data from the board of education websites from each of these states and the population by county data from the World Population Review website. Our hypothesis was that the counties with lower population density would generally have a greater graduation rate. We began with Florida. The third most highly populated state in the US, it had the least variance from its most dense county to its least.</p>
-<p>This graph depicts the Florida graduation rate on the Y-axis and the population density on the X-axis. In Florida, the higher population counties are typically found above the mean graduation rate(85%), and this seems to contradict our hypothesis. The highest population county, Pinellas, is in fact slightly above the mean graduation rate at 87.6%. The least populace county is Liberty county which sits comfortably below the mean at 9.4 people per square mile. Again this contradicts our hypothesis. ## Florida Graph</p>
+<p>This graph depicts the Florida graduation rate on the Y-axis and the population density on the X-axis. In Florida, the higher population counties are typically found above the mean graduation rate(85%), and this seems to contradict our hypothesis. The highest population county, Pinellas, is in fact slightly above the mean graduation rate at 87.6%. The least populace county is Liberty county which sits comfortably below the mean at 9.4 people per square mile. Again this contradicts our hypothesis.</p>
+</section>
+<section id="florida-graph" class="level2">
+<h2 class="anchored" data-anchor-id="florida-graph">Florida Graph</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -83,7 +86,10 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>Florida’s graduation rate is highest on average around the southern tip of the state. The panhandle has an interesting mix of counties with both very high graduation rates and also some of the lowest in the state. The middle of the state is fairly average but has a few standouts in both directions ## Florida Graduation Rate Map</p>
+<p>Florida’s graduation rate is highest on average around the southern tip of the state. The panhandle has an interesting mix of counties with both very high graduation rates and also some of the lowest in the state. The middle of the state is fairly average but has a few standouts in both directions.</p>
+</section>
+<section id="florida-graduation-rate-map" class="level2">
+<h2 class="anchored" data-anchor-id="florida-graduation-rate-map">Florida Graduation Rate Map</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -93,7 +99,10 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>The population is high in the southern tip and middle of Florida with a small group of counties clustered in the south with very low population densities. The pan handle is extremely sparse and only has about four counties with populations of any relevant size. ## Florida Population Density Map</p>
+<p>The population is high in the southern tip and middle of Florida with a small group of counties clustered in the south with very low population densities. The pan handle is extremely sparse and only has about four counties with populations of any relevant size.</p>
+</section>
+<section id="florida-population-density-map" class="level2">
+<h2 class="anchored" data-anchor-id="florida-population-density-map">Florida Population Density Map</h2>
 <div class="cell">
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Values have found that are higher than the highest break. They are
@@ -107,7 +116,260 @@ assigned to the highest interval</code></pre>
 </div>
 </div>
 </div>
+</section>
+<section id="summary-florida" class="level2">
+<h2 class="anchored" data-anchor-id="summary-florida">Summary Florida</h2>
+<div class="cell">
+<div class="cell-output-display">
+<!-- preamble start -->
+
+    <script>
+
+      function styleCell_4k6g3wutua56lowdw7tl(i, j, css_id) {
+          var table = document.getElementById("tinytable_4k6g3wutua56lowdw7tl");
+          var cell = table.rows[i]?.cells[j];  // Safe navigation to avoid errors
+          if (cell) {
+              console.log(`Styling cell at (${i}, ${j}) with class ${css_id}`);
+              cell.classList.add(css_id);
+          } else {
+              console.warn(`Cell at (${i}, ${j}) not found.`);
+          }
+      }
+      function insertSpanRow(i, colspan, content) {
+        var table = document.getElementById('tinytable_4k6g3wutua56lowdw7tl');
+        var newRow = table.insertRow(i);
+        var newCell = newRow.insertCell(0);
+        newCell.setAttribute("colspan", colspan);
+        // newCell.innerText = content;
+        // this may be unsafe, but innerText does not interpret <br>
+        newCell.innerHTML = content;
+      }
+      function spanCell_4k6g3wutua56lowdw7tl(i, j, rowspan, colspan) {
+        var table = document.getElementById("tinytable_4k6g3wutua56lowdw7tl");
+        const targetRow = table.rows[i];
+        const targetCell = targetRow.cells[j];
+        for (let r = 0; r < rowspan; r++) {
+          // Only start deleting cells to the right for the first row (r == 0)
+          if (r === 0) {
+            // Delete cells to the right of the target cell in the first row
+            for (let c = colspan - 1; c > 0; c--) {
+              if (table.rows[i + r].cells[j + c]) {
+                table.rows[i + r].deleteCell(j + c);
+              }
+            }
+          }
+          // For rows below the first, delete starting from the target column
+          if (r > 0) {
+            for (let c = colspan - 1; c >= 0; c--) {
+              if (table.rows[i + r] && table.rows[i + r].cells[j]) {
+                table.rows[i + r].deleteCell(j);
+              }
+            }
+          }
+        }
+        // Set rowspan and colspan of the target cell
+        targetCell.rowSpan = rowspan;
+        targetCell.colSpan = colspan;
+      }
+      // tinytable span after
+      window.addEventListener('load', function () {
+          var cellsToStyle = [
+            // tinytable style arrays after
+          { positions: [ { i: 1, j: 0 }, { i: 1, j: 1 }, { i: 1, j: 2 }, { i: 1, j: 3 }, { i: 1, j: 4 }, { i: 1, j: 5 },  ], css_id: 'tinytable_css_as0aydynyik9fszsju9w',}, 
+          { positions: [ { i: 0, j: 0 }, { i: 0, j: 1 }, { i: 0, j: 2 }, { i: 0, j: 3 }, { i: 0, j: 4 }, { i: 0, j: 5 },  ], css_id: 'tinytable_css_10i6za84jsz6kfoeqqwa',}, 
+          ];
+
+          // Loop over the arrays to style the cells
+          cellsToStyle.forEach(function (group) {
+              group.positions.forEach(function (cell) {
+                  styleCell_4k6g3wutua56lowdw7tl(cell.i, cell.j, group.css_id);
+              });
+          });
+      });
+    </script>
+
+    <style>
+      /* tinytable css entries after */
+      .table td.tinytable_css_as0aydynyik9fszsju9w, .table th.tinytable_css_as0aydynyik9fszsju9w { border-bottom: solid #d3d8dc 0.1em; }
+      .table td.tinytable_css_10i6za84jsz6kfoeqqwa, .table th.tinytable_css_10i6za84jsz6kfoeqqwa { border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
+    </style>
+    <div class="container">
+      <table class="table table-borderless" id="tinytable_4k6g3wutua56lowdw7tl" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+        <thead>
+        
+              <tr>
+                <th scope="col">avg Grad Rate</th>
+                <th scope="col">min Grad Rate</th>
+                <th scope="col">max Grad Rate</th>
+                <th scope="col">avg Density</th>
+                <th scope="col">min Density</th>
+                <th scope="col">max Density</th>
+              </tr>
+        </thead>
+        
+        <tbody>
+                <tr>
+                  <td>85.63881</td>
+                  <td>66.6</td>
+                  <td>97.5</td>
+                  <td>416.3847</td>
+                  <td>9.440191</td>
+                  <td>3508.044</td>
+                </tr>
+        </tbody>
+      </table>
+    </div>
+<!-- hack to avoid NA insertion in last line -->
+</div>
+</div>
 <p>On average the counties with high population density performed around the mean of graduation rate while the counties of lower density had both the highest and lowest graduation rate. This lead us to speculate that there were factors at play that had more of an effect than the population density overall.</p>
+<p>The next state was Texas. The second biggest state in the US, it was the largest we gathered data from in both population and actual land area.</p>
+</section>
+<section id="texas-graph" class="level2">
+<h2 class="anchored" data-anchor-id="texas-graph">Texas Graph</h2>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Stat100Paper_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="texas-graduation-rate-map" class="level2">
+<h2 class="anchored" data-anchor-id="texas-graduation-rate-map">Texas Graduation Rate Map</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Stat100Paper_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="texas-population-density-map" class="level2">
+<h2 class="anchored" data-anchor-id="texas-population-density-map">Texas Population Density Map</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Stat100Paper_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="summary-texas" class="level2">
+<h2 class="anchored" data-anchor-id="summary-texas">Summary Texas</h2>
+<div class="cell">
+<div class="cell-output-display">
+<!-- preamble start -->
+
+    <script>
+
+      function styleCell_xb240si1b1gwo517nggs(i, j, css_id) {
+          var table = document.getElementById("tinytable_xb240si1b1gwo517nggs");
+          var cell = table.rows[i]?.cells[j];  // Safe navigation to avoid errors
+          if (cell) {
+              console.log(`Styling cell at (${i}, ${j}) with class ${css_id}`);
+              cell.classList.add(css_id);
+          } else {
+              console.warn(`Cell at (${i}, ${j}) not found.`);
+          }
+      }
+      function insertSpanRow(i, colspan, content) {
+        var table = document.getElementById('tinytable_xb240si1b1gwo517nggs');
+        var newRow = table.insertRow(i);
+        var newCell = newRow.insertCell(0);
+        newCell.setAttribute("colspan", colspan);
+        // newCell.innerText = content;
+        // this may be unsafe, but innerText does not interpret <br>
+        newCell.innerHTML = content;
+      }
+      function spanCell_xb240si1b1gwo517nggs(i, j, rowspan, colspan) {
+        var table = document.getElementById("tinytable_xb240si1b1gwo517nggs");
+        const targetRow = table.rows[i];
+        const targetCell = targetRow.cells[j];
+        for (let r = 0; r < rowspan; r++) {
+          // Only start deleting cells to the right for the first row (r == 0)
+          if (r === 0) {
+            // Delete cells to the right of the target cell in the first row
+            for (let c = colspan - 1; c > 0; c--) {
+              if (table.rows[i + r].cells[j + c]) {
+                table.rows[i + r].deleteCell(j + c);
+              }
+            }
+          }
+          // For rows below the first, delete starting from the target column
+          if (r > 0) {
+            for (let c = colspan - 1; c >= 0; c--) {
+              if (table.rows[i + r] && table.rows[i + r].cells[j]) {
+                table.rows[i + r].deleteCell(j);
+              }
+            }
+          }
+        }
+        // Set rowspan and colspan of the target cell
+        targetCell.rowSpan = rowspan;
+        targetCell.colSpan = colspan;
+      }
+      // tinytable span after
+      window.addEventListener('load', function () {
+          var cellsToStyle = [
+            // tinytable style arrays after
+          { positions: [ { i: 1, j: 0 }, { i: 1, j: 1 }, { i: 1, j: 2 }, { i: 1, j: 3 }, { i: 1, j: 4 }, { i: 1, j: 5 },  ], css_id: 'tinytable_css_f3wk496l1mruhctj5o1o',}, 
+          { positions: [ { i: 0, j: 0 }, { i: 0, j: 1 }, { i: 0, j: 2 }, { i: 0, j: 3 }, { i: 0, j: 4 }, { i: 0, j: 5 },  ], css_id: 'tinytable_css_3n1ril8c7aql3ekkiuxq',}, 
+          ];
+
+          // Loop over the arrays to style the cells
+          cellsToStyle.forEach(function (group) {
+              group.positions.forEach(function (cell) {
+                  styleCell_xb240si1b1gwo517nggs(cell.i, cell.j, group.css_id);
+              });
+          });
+      });
+    </script>
+
+    <style>
+      /* tinytable css entries after */
+      .table td.tinytable_css_f3wk496l1mruhctj5o1o, .table th.tinytable_css_f3wk496l1mruhctj5o1o { border-bottom: solid #d3d8dc 0.1em; }
+      .table td.tinytable_css_3n1ril8c7aql3ekkiuxq, .table th.tinytable_css_3n1ril8c7aql3ekkiuxq { border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
+    </style>
+    <div class="container">
+      <table class="table table-borderless" id="tinytable_xb240si1b1gwo517nggs" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+        <thead>
+        
+              <tr>
+                <th scope="col">avg Grad Rate</th>
+                <th scope="col">min Grad Rate</th>
+                <th scope="col">max Grad Rate</th>
+                <th scope="col">avg Density</th>
+                <th scope="col">min Density</th>
+                <th scope="col">max Density</th>
+              </tr>
+        </thead>
+        
+        <tbody>
+                <tr>
+                  <td>94.47222</td>
+                  <td>59.7</td>
+                  <td>100</td>
+                  <td>133.8667</td>
+                  <td>0.2008782</td>
+                  <td>2995.519</td>
+                </tr>
+        </tbody>
+      </table>
+    </div>
+<!-- hack to avoid NA insertion in last line -->
+</div>
+</div>
 </section>
 
 </main>
